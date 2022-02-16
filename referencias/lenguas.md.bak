@@ -1,0 +1,18 @@
+## LENGUAS
+<br />
+Codificación de tres (3) caracteres que se debe utilizar para cumplimentar el atributo [**`LENGUA`**](../../datos/modelo_de_datos#214-lengua), conforme con la norma [ISO 639-3](https://iso639-3.sil.org/code_tables/639/data)
+
+
+|ISO 639-3 Code|Language Name(s)|
+|---|---|
+|ast|Asturian, Asturleonese, Bable, Leonese|
+|arg|Aragonese|
+|glg|Galician Vascuence; Lengua vasca|
+|cat|Catalan, Valencian|
+|spa|Castilian, Spanish|
+|oci|Occitan (post 1500)|
+
+<br />
+
+***
+

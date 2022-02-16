@@ -1,0 +1,207 @@
+## GEOCODIFICACIÓN INVERSA
+<br />
+
+La  *geocodificación inversa*, es el método utilizado para encontrar las direcciones o lugares que se encuentran más próximos a un punto de coordenadas dadas.
+
+Este procedimiento permite localizar cerca de una ubicación los siguientes tipos de elementos:
+
+- direcciones
+- topónimos
+- puntos de interés (POIs)
+
+<br />
+### Construcción de la consulta
+<br />
+
+El formato de interrogación a la API se construye a partir de la url de referencia de este método (/v1/reverse), seguido del signo **`?`** y de la secuencia de parámetros que configuran la pregunta, separados por el signo **`&`**.
+
+En nuestro caso, la url (endpoint) a la que dirigir las peticiones de *geocodificación inversa* es:  
+**https://geocoder-5-ign.larioja.org/v1/reverse**
+
+Para realizar una codificación inversa es necesario disponer siempre de las coordenadas del punto cerca del cual se quiere localizar la información, especificando su latitud y longitud en la llamada mediante los parámetros **`point.lat`** y **`point.lon`** respectivamente.
+
+Ejemplo: Si se desea localizar el punto, dirección, topónimo o POI, más próximo al punto conocido como *Km 0* de España, ubicado en la *Puerta del Sol* de Madrid, cuyas coordenadas latitud,longitud son: 40.416645598,-3.70381211
+
+<br />
+![Kilómetro 0 (fuente: Wikimedia Commons)](../../img/kilometro_cero.jpg "Kilómetro 0(fuente: Wikimedia Commons)")
+<br />
+
+La sintaxis a utilizar es:
+
+[https://geocoder-5-ign.larioja.org/v1/reverse?point.lat=40.416645598&point.lon=-3.70381211](https://geocoder-5-ign.larioja.org/v1/reverse?point.lat=40.416645598&point.lon=-3.70381211)
+
+Pulsando sobre el enlace anterior se obtiene un fichero en formato [GeoJSON](https://geojson.org/) que contiene los resultados de la búsqueda de los puntos más próximos a la ubicación dada, en este ejemplo la placa de granito del Km 0 en Madrid.
+
+El fichero con formato GeoJSON puede ser leído en un navegador web <sup>(1)</sup> o en un procesador de texto.
+
+
+<br />
+### Cuadro de parámetros
+<br />
+
+Como en otros métodos, las operaciones de consulta de *geocodificación inversa* se pueden configurar añadiendo a la sintaxis de la pregunta distintos parámetros, que en este caso son los siguientes:
+
+|Parámetro|Tipo|Obligatorio|Defecto|Descripción|Ejemplo|
+|---|---|---|---|---|---|
+|**`boundary.circle.radius`**|numérico coma flotante|no|50|Valor del radio (kilómetros) utilizado en la búsqueda en una región circular <sup>(2)</sup>|10|
+|**`boundary.country`**|cadena de caracteres|no|ninguno|<p class="text-warning">NO IMPLEMENTADO</p>| |
+|**`boundary.gid`**|cadena de caracteres|no|ninguno|<p class="text-warning">NO IMPLEMENTADO</p>| |
+|**`point.lat`**|numérico coma flotante|no|ninguno|Valor de la latitud del punto de referencia utilizado en la *geocodificación inversa* <sup>(2)</sup>|42.268|
+|**`point.lon`**|numérico coma flotante|no|ninguno|Valor de la longitud del punto de referencia utilizado en la *geocodificación inversa* <sup>(2)</sup>|-4.405|
+|**`layers`**|cadena de caracteres|no|todas las capas|Nombres de las capas de datos a las que se dirije la consulta, separados por comas|venue, street|
+|**`size`**|integer|no|10|Número deseado de resultados|5|
+|**`sources`**|cadena de caracteres|no|todas las fuentes|Listado de fuentes de datos separados por comas, codificados según [lista controlada *Proveedores de datos*](../../listas_controladas/proveedores_de_datos)|cnig,calrj|
+|||||||
+
+<br />
+### Configuración de la consulta
+<br />
+
+Los parámetros relacionados en el cuadro anterior permiten configurar distintos aspectos de la consulta.
+
+<br />
+#### Fijar el número de resultados
+<br />
+
+Por defecto la API devuelve hasta 10 resultados. Si se desea un número distinto de resultados, este se puede configurar en la llamada utilizando el parámetro **`size`**.
+
+|Parámetro|Tipo|Obligatorio|Defecto|Descripción|Ejemplo|
+|---|---|---|---|---|---|
+|**`size`**|integer|no|10|Número deseado de resultados|5|
+|||||||
+
+Si en el ejemplo anterior se deseara recibir solamente un único resultado, la sintaxis de la consulta debería ser:
+
+[https://geocoder-5-ign.larioja.org/v1/reverse?point.lat=40.416645598&point.lon=-3.70381211&size=1](https://geocoder-5-ign.larioja.org/v1/reverse?point.lat=40.416645598&point.lon=-3.70381211&size=1)
+
+El valor por defecto del parámetro  **`size`** es 10, pudiéndose configurar la respuestas hasta un máximo de 40 resultados. Si se sobrepasa este valor, la respuesta devolverá 40 resultados junto a un mensaje de advertencia.
+
+<br />
+#### Filtrado por origen de los datos
+<br />
+
+El almacén de datos de referencia en este geocodificador permite combinar datos de muchas fuentes, de hecho, uno de los objetivos principales del proyecto es definir un modelo de datos neutro en formato CSV, con objeto de poder cargar datos procedentes de distintos productores.
+
+En la fase de pruebas se han cargado direcciones de las siguientes [fuentes de datos](../../datos/fuentes_de_datos) <sup>(3)</sup>.
+
+La *geocodificación inversa* devuelve por defecto resultados de cualquiera de las fuentes de datos disponibles, pero utilizando el parámetro **`sources`**, es posible constreñir la búsqueda a los datos de un proveedor en particular a bien un conjunto de ellos.
+
+|Parámetro|Tipo|Obligatorio|Defecto|Descripción|Ejemplo|
+|---|---|---|---|---|---|
+|**`sources`**|cadena de caracteres|no|todas las fuentes|Listado de fuentes de datos separados por comas, codificados según [lista controlada *Proveedores de datos*](../../listas_controladas/proveedores_de_datos)|cnig,calrj|
+|||||||
+
+El siguiente ejemplo dirige la consulta anterior solamente a los datos aportados por el *Centro Nacional de Información Geográfica (CNIG)*:
+
+[https://geocoder-5-ign.larioja.org/v1/reverse?point.lat=40.416645598&point.lon=-3.70381211&sources=cnig](https://geocoder-5-ign.larioja.org/v1/reverse?point.lat=40.416645598&point.lon=-3.70381211&sources=cnig)
+
+En la siguiente imagen se puede ver mapeado el fichero GeoJSON con los resultados de la petición.
+
+<br />
+![Método reverse. Filtrado sources (fuente: propia)](../../img/metodo_reverse_filtrado_sources.jpg "Método reverse. Filtrado sources (fuente: propia)")
+<br />
+
+<br />
+
+#### Filtrado por tipo de datos
+<br />
+
+El geocoder del SCN almacena la información puntual de tres tipos de datos:*direcciones*; *topónimos* y *puntos de interés (POIs)*, almacenándolos en tablas o capas diferentes. 
+
+El parámetro **`layers`** permite dirigir la petición de información a las siguientes capas, con el fin de obtener el resultado deseado:
+<br />
+  <table class="table table-bordered">
+  <thead>
+  	<tr>
+  		<th>layer (capa)</th>
+  		<th>descripción</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td>venue</td>
+  		<td>topónimos; puntos de interés; nombres propios de las direcciones</td>
+  	</tr>
+  	<tr>
+  		<td>address</td>
+  		<td>puntos con una dirección postal</td>
+  	</tr>
+  	<tr>
+  		<td>street</td>
+  		<td>calles; vías; carreteras</td>
+  	</tr>
+  </tbody>
+  </table>
+
+El uso del parámetro **`layers`** es el siguiente:
+
+|Parámetro|Tipo|Obligatorio|Defecto|Descripción|Ejemplo|
+|---|---|---|---|---|---|
+|**`layers`**|cadena de caracteres|no|todas las capas|Nombres de las capas de datos a las que se dirije la consulta, separados por comas|venue, street|
+|||||||
+
+Ejemplos:
+
+Búsqueda de topónimos o puntos de interés cercanos al Km 0: 
+[https://geocoder-5-ign.larioja.org/v1/reverse?point.lat=40.416645598&point.lon=-3.70381211&layers=venue](https://geocoder-5-ign.larioja.org/v1/reverse?point.lat=40.416645598&point.lon=-3.70381211&layers=venue)
+
+La imagen siguiente muestra el mapeado del fichero GeoJSON que contiene los resultados de la petición.
+
+<br />
+![Método reverse. Filtrado layers (fuente: propia)](../../img/metodo_reverse_filtrado_layers.jpg "Método reverse. Filtrado layers (fuente: propia)")
+<br />
+
+<br />
+### Distancia y valor de confianza
+<br />
+
+En la *geocodificación inversa* el fichero GeoJSON contiene para cada elemento devuelto la información de la distancia de este al punto de referencia, junto con una puntuación que valora el nivel de confianza de la respuesta.
+
+Los valores de confianza se calculan en función de la distancia desde el resultado hasta el punto de referencia establecido, siendo probable que este valor calculado cambie con diferentes fuentes y capas de datos.
+
+  <table class="table table-bordered">
+  <thead>
+  	<tr>
+  		<th>Distancia desde el punto de referencia</th>
+  		<th>Valor de confianza</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td>< 1m</td>
+  		<td>1.0</td>
+  	</tr>
+  	<tr>
+  		<td>< 10m</td>
+  		<td>0.9</td>
+  	</tr>
+  	<tr>
+  		<td>< 100m</td>
+  		<td>0.8</td>
+  	</tr>
+  	<tr>
+  		<td>< 250m</td>
+  		<td>0.7</td>
+  	</tr>
+  	<tr>
+  		<td>< 1km</td>
+  		<td>0.6</td>
+  	</tr>
+  	<tr>
+  		<td>>= 1km</td>
+  		<td>0.5</td>
+  	</tr>
+  </tbody>
+  </table>
+
+<br />
+***
+<small>
+<div class="text-primary">NOTAS:</div>
+
+<div class="text-primary"><sup>(1)</sup> Se aconseja implementar en el navegador web un complemento para la visualización estructurada de ficheros JSON.</div>
+<div class="text-primary"><sup>(2)</sup> Utilizar la notación punto (.) como signo de separación decimal.</div>  
+<div class="text-primary"><sup>(3)</sup> A los datos de direcciones que se encuentran en desuso o sin vigencia administrativa, cuyo atributo ESTADO tiene el valor <I>Histórico</I>, se les añade al código de proveedor el sufijo «-h», con objeto de poder realizar *geocodificación directa* específica mediante el parámetro <I>sources</I>, y evitar al mismo tiempo interferencias en los procesos de *geocodificación inversa*.</div>
+</small>
+
+

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto de geocodificación de direcciones. Comisión Especializada de Normas Geográficas. España">
+    <meta name="author" content="Gonzalo López García">
+    <link rel="canonical" href="https://example.com/api/informacion_general/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>Información general - Geocodificador SCN</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">Geocodificador SCN</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Datos <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../datos/modelo_de_datos/">Modelo de datos</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../datos/fuentes_de_datos/">Fuentes de datos</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Información general</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Métodos</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../geocodificacion_directa/">Geocodificación directa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../geocodificacion_inversa/">Geocodificación inversa</a>
+</li>
+
+        
+            
+<li >
+    <a href="../autocompletar/">Autocompletar</a>
+</li>
+
+        
+            
+<li >
+    <a href="../geocodificacion_estructurada/">Geocodificación estructurada</a>
+</li>
+
+        
+            
+<li >
+    <a href="../no_disponible/">Lugar</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../no_disponible/">Formato de la respuesta</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Referencias <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../referencias/abreviaturas/">Abreviaturas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/ciudades_autonomas/">Ciudades autónomas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/comunidades_autonomas/">Comunidades autónomas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/estados_del_dato/">Estados del dato</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/lenguas/">Lenguas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/municipios/">Municipios</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/poblaciones/">Poblaciones</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/proveedores_de_datos/">Proveedores de datos</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/provincias/">Provincias</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../referencias/tipos_de_dato/">Tipos de dato</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../ejemplos/no_disponible/">Ejemplos</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../datos/fuentes_de_datos/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../geocodificacion_directa/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/cenormasgeograficas/geocodificador/edit/master/docs/api/informacion_general.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#servicio-api-de-geocodificacion-de-direcciones">SERVICIO API DE GEOCODIFICACIÓN DE DIRECCIONES</a></li>
+            <li class="second-level"><a href="#funcionalidad">Funcionalidad</a></li>
+                
+            <li class="second-level"><a href="#la-api-de-direcciones-pelias">La API de direcciones Pelias</a></li>
+                
+            <li class="second-level"><a href="#metodos">Métodos</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="servicio-api-de-geocodificacion-de-direcciones">SERVICIO API DE GEOCODIFICACIÓN DE DIRECCIONES</h2>
+<p><em>(EN EDICIÓN)</em>
+<br /></p>
+<p>El <em>Servicio API de geocodificación de direcciones del Sistema Cartográfico Nacional</em> de España, tiene como objetivo principal buscar y obtener a partir de sus datos identificativos, la localización geográfica de cualquier dirección que se encuentre ubicada dentro del territorio español .</p>
+<p>La URL PROVISIONAL del servicio es: <a href="https://geocoder-5-ign.larioja.org/v1"><strong>https://geocoder-5-ign.larioja.org/v1</strong></a></p>
+<p>Además de la geolocalización de una dirección específica, este servicio permite también obtener los datos de las direcciones cercanas a un punto determinado así como aquellas que estén ubicadas dentro de una determinada área geográfica rectangular o circular.</p>
+<p>El servicio utiliza internamente la <a href="https://github.com/pelias/pelias">API Pelias</a> con objeto de ofrecer un conjunto de funciones de consulta flexibles y sofisticadas.</p>
+<p>Los métodos (<em>endpoints</em>) y parámetros que se describen aquí, permiten a cualquier usuario identificar y localizar direcciones con la máxima precisión a partir de los datos completos o parciales que definen una referencia postal, de un identificador (ID) o de un nombre representativo de la misma.</p>
+<p>Las búsquedas interrogan al conjunto de direcciones que se encuentran almacenadas en una base de datos <a href="https://www.elastic.co/es/">ElasticSearch (ELS)</a>, siendo el binomio <em>ElasticSearch-API Pelias</em>, junto con distintos procedimientos desarrollados ad-hoc para este servicio, los elementos que conforman la plataforma tecnológica que provee la funcionalidad.</p>
+<p>Los datos básicos de las direcciones de referencia son recopilados a partir de la información proporcionada por los diferentes productores competentes en materia de direcciones, dentro del marco de cooperación que ofrece el <a href="http://www.scne.es/"><em>Sistema Cartográfico Nacional</em></a> de España.</p>
+<p>Además de direcciones, el servicio de geocodificación está también diseñado para la localización geográfica de topónimos y puntos de interés (POIs).</p>
+<p><br /></p>
+<h3 id="funcionalidad">Funcionalidad</h3>
+<p><br /></p>
+<p>El servicio permite interrogar la API con el fin de:</p>
+<ul>
+<li>Obtener los datos y la ubicación precisa de una dirección.  </li>
+<li>Localizar la dirección más próxima a un punto determinado (geocodificación inversa).  </li>
+<li>Localizar las direcciones que se encuentran dentro de un área geográfica rectangular o circular.  </li>
+</ul>
+<p>pudiendo limitar el ámbito de búsqueda a los datos ofrecidos por uno o varios suministradores.  </p>
+<p><br /></p>
+<h3 id="la-api-de-direcciones-pelias">La API de direcciones Pelias</h3>
+<p><br /></p>
+<p>La <em>API Pelias</em> utilizada subyacentemente en este servicio, es una API RESTful que devuelve el resultado de las consultas realizadas en <a href="https://es.wikipedia.org/wiki/JSON">formato JSON</a> conforme a los métodos y parámetros definidos en este documento.</p>
+<p><br /></p>
+<h3 id="metodos">Métodos</h3>
+<p><br /></p>
+<p>Los métodos y <em>endpoints</em> que se pueden utilizar son los siguientes:</p>
+<ul>
+<li><a href="../../api/geocodificacion_directa/"><strong>Geocodificación directa</strong></a> <small>(/v1/search)</small>: Método que obtiene los datos y la ubicación de una dirección o lugar, a partir de sus datos identificativos o de referencia.  </li>
+<li><a href="../../api/geocodificacion_inversa/"><strong>Geocodificación inversa</strong></a> <small>(/v1/reverse)</small>: Método que busca las direcciones más próximas a un punto geográfico determinado.  </li>
+<li><a href="../../api/autocompletar/"><strong>Autocompletar</strong> </a>(<small>(/v1/autocomplete)</small>: Método que obtiene resultados en tiempo real sin necesidad de completar todos los datos de identificación.  </li>
+<li><strong>Geocodificación estructurada</strong> <small>(/v1/search/structured)</small>: (beta) Método que encuentra un lugar a partir de datos estructurados en calle, número, ciudad, etc.  </li>
+<li><strong>Lugar</strong> <small>(/v1/place)</small>: Método que obtiene detalles sobre un lugar devuelto por una consulta anterior.<br />
+<br /></li>
+</ul>
+<hr />
+<p>(1) La documentación técnica de esta página web reutiliza información original de la <em>API Pelias</em>, disponible en el repositorio Github: <a href="https://github.com/pelias/documentation">https://github.com/pelias/documentation</a>.</p>
+<p><br /></p>
+<hr /></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Copyright: <a href='https://scne.es'>Sistema Cartográfico Nacional (España)</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

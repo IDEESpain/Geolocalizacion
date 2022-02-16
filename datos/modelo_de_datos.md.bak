@@ -1,0 +1,602 @@
+## MODELO DE DATOS
+<br>
+
+Se describe a continuacíón el modelo de datos que se ha definido para la recopilación efectiva de los datos de direcciones, topónimos y puntos de interés (POI) que servirán de referencia para la implementación de un servicio nacional de geocodificación de direcciones.
+
+<br>
+### 1. Objetivos
+<br>
+
+El modelo de datos a definir tiene como objetivo principal estructurar la información que es preciso recopilar para constituir los datos de referencia de un servicio de geocodificación de direcciones de carácter nacional.
+
+Las características técnicas que debe cumplir el servicio son las siguientes:
+
+- Operaciones de descubrimiento y geolocalización (obtención de coordenadas geográficas) de una dirección en base a sus principales componentes (población, nombre del vial, portal, etc.).
+- Priorización de las soluciones más cercanas geográficamente a un punto dado.
+- Operaciones de geocodificación inversa para el descubrimiento de la dirección más próxima a un punto de coordenadas conocidas.
+- Búsqueda circunscrita dentro de un área geográfica o una unidad administrativa determinada.
+- Búsqueda selectiva en subconjuntos de datos de uno o varios proveedores de datos.
+- Tecnología API REST ([Interfaz de Programación de Aplicaciones](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones)). Posibilidad de poder invocar los métodos y procedimientos desde procesos informáticos.
+
+En cuanto a la funcionalidad el servicio debe permitir:
+
+- Localización de direcciones fuera del ámbito urbano
+- Localización de direcciones en vigor e históricas (en desuso).
+- Consulta de direcciones expresadas en cualquiera de las lenguas oficiales.
+- Utilización de sinónimos y abreviaturas.
+- Respuesta a búsqueda de direcciones no estructuradas.
+- Búsqueda de una dirección a partir de su nombre propio.
+- Geolocalización de toponimia y nombres geográficos.
+- Geolocalización de Puntos de Interés (POI).
+- Localización de los puntos kilométricos de una carretera.
+
+<br>
+### 2. Introducción
+<br>
+
+En España la competencia administrativa para definir el nombre oficial del viario y la numeración de las direcciones corresponde a los ayuntamientos.
+
+Por este motivo, para constituir una base de datos de direcciones, es necesaro definir un procedimiento de recopilación de información muy básico en el que pueda participar cualquier administración local independientemente de su tamaño y capacidad técnica o económica.
+
+Para ello se ha establecido que el formato de fichero de datos a utilizar para la recolección de direcciones sea conforme con el estándar CSV (*Comma-Separated Values*) [[RFC 4180]](https://datatracker.ietf.org/doc/html/rfc4180), dada su naturaleza de texto plano, la sencillez de su estructura interna y la posibidad de generarlo con cualquier tipo de software.
+
+A diferencia de otros modelos de datos de direcciones, la estructura y tipología de sus atributos se ha orientado para atender las funcionalidades genéricas de un servicio de geocodificación.
+
+Por este motivo se ha incluido un atributo que codifique el estado del dato, con objeto de diferenciar las direcciones entre: oficiales; normalizadas; históricas y otras, así como otro atributo que permita asignar un nombre propio a una dirección o localización, con objeto de facilitar su descubrimiento cuando no se dispone de un dato preciso de dirección, siendo aplicable también a la búsqueda de toponimia y puntos de interés.
+
+Es necesario recalcar que este modelo de datos no está dirigido a la formación de una base de datos de direcciones al uso, sino a la indexación de información con el objetivo de dar soporte a un servicio de geocodificación.
+
+<br>
+### 3. Modelo de datos
+<br>
+
+#### 3.1 Identificador
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`ID`**|Identificador persistente y local proporcionado por el proveedor para referenciar una dirección (ubicación puntual) de un lugar que puede tener diferentes lenguas, diferentes épocas, diferentes denominaciones…|Opcional|0,1|Cadena de caracteres|Texto libre|
+|||||||
+
+Características para asignar el identificador:
+
+- Expresa el identificador único de cada registro de datos tal como es gestionado por el organismo proveedor de la información.
+- Todos los registros que hacen referencia a la misma dirección, topónimo o POI, independientemente de la lengua y del momento temporal, como es el caso de las direcciones activas y las obsoletas, o los registros que se creen para cada fórmula lingüística, deberían tener el mismo ID.
+
+<div class="bs-callout bs-callout-info">
+ <small>
+ <h4><small>Ejemplo: ID</small></h4>
+ Ejemplo de tratamiento del ID de una dirección por el <i>CNIG</i>:
+ <table class="table table-bordered">
+  <thead>
+  	<tr>
+  		<th>ID</th>
+  		<th>2016</th>
+  		<th>2021</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td>123456</td>
+  		<td>Avenida Diagonal, 16</td>
+  		<td>Avenida Diagonal, 21</td>
+  	</tr>
+  	<tr>
+ 		<td>123456</td>
+  		<td>Avinguda Diagonal, 16</td>
+  		<td>Avinguda Diagonal, 21</td>
+  	</tr>
+  </tbody>
+  </table>
+  Ejemplo de tratamiento del ID de una dirección por la <i>Diputación Provincial de Barcelona</i>:
+  <table class="table table-bordered">
+  <thead>
+  	<tr>
+  		<th>ID</th>
+  		<th>2016</th>
+  		<th>2021</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td>bcn4cfr567</td>
+  		<td>Avenida Diagonal, 16</td>
+  		<td>Avenida Diagonal, 21</td>
+  	</tr>
+  	<tr>
+ 		<td>bcn4cfr567</td>
+  		<td>Avinguda Diagonal, 16</td>
+  		<td>Avinguda Diagonal, 21</td>
+  	</tr>
+  </tbody>
+ </table>
+ </small>
+</div>
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Nota:</small></h4>
+Este atributo, concatenado con el relativo a la fuente de datos, se puede utilizar eficazmente para diseñar los procesos de actualización de la información, para el seguimiento de su evolución histórica, así como para el estudio de las distintas fórmulas lingüísticas de una dirección, topónimo o POI.
+</small>
+</div>
+<br>
+#### 3.2 Tipo de vía
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`TIPVIA`**|Expresión de la tipología de vía de referencia o de su abreviatura |Opcional|0,1|Cadena de caracteres|Texto libre|
+|||||||
+
+No es necesario que las organizaciones tengan almacenado en sus bases de datos el `TIPVIA`. El campo puede estar vacío.
+
+Se propone, como dominio, utilizar la tipología proporcionada por el INE, la D.G. del Catastro y los departamentos catastrales del País Vasco y Navarra, así como los utilizados en los proyectos de recopilación de datos de direcciones gestionados por otras administraciones públicas.
+
+Se recomienda utilizar la expresión textual completa para el tipo de vía, siendo posible aplicar las abreviaturas más comunes.
+
+En los casos en que el tipo de vía se considere parte intrínseca del nombre, se recomienda no rellenar el atributo [`TIPVIA`](../../datos/modelo_de_datos/#32-tipo-de-via) con el fin de no duplicar esta información.
+
+Tampoco es necesario expresar el tipo de vía en aquellas direcciones identificadas mediante un nombre propio o un código, ni en los casos correspondientes a topónimos o puntos de interés.
+
+<div class="bs-callout bs-callout-info">
+ <small>
+ <h4><small>Ejemplo: TIPVIA + nombre de vía</small></h4>
+  Se parsea para identificar solo el nombre de la vía (sin preposiciones ni artículos)
+ <table class="table table-bordered">
+  <thead>
+  	<tr>
+  		<th>TIPVIA</th>
+  		<th>nombre</th>
+  		<th>población</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td><i>(null)</i></td>
+  		<td>Calle de la Virgen María</td>
+  		<td>Logroño</td>
+  	</tr>
+  	<tr>
+ 		<td>Calle</td>
+  		<td>de la Virgen María</td>
+  		<td>Madrid</td>
+  	</tr>
+  	<tr>
+  		<td><i>(null)</i></td>
+  		<td>Barrutiko kalea</td>
+  		<td>Iruñea</td>
+  	</tr>
+  </tbody>
+ </table>
+ </small>
+</div>
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Notas:</small></h4>
+En el caso del País Vasco, donde el tipo de vía se coloca generalmente detrás del nombre (Ej: Satrustegi hiribidea, Mirakontxa pasealekua, Zubieta kalea), se recomienda concatenar la información del nombre y tipo de vía conforme a su orden y uso natural dentro del atributo <i>Nombre de la vía</i> <a href="../../datos/modelo_de_datos/#33-nombre-de-la-via">[NOMVIA]</a>, manteniendo vacío el atributo <i>Tipo de vía</i> <a href="../../datos/modelo_de_datos/#32-tipo-de-via">[TIPVIA]</a>.
+<br>
+<br>
+Es necesario atender los casos en los se incluye un tipo de vía que no coincide con el que ofrece el Ayuntamiento. Ejemplos de ello son la <i>Calle Avda. Mediterráneo</i> o <i>Calle Travesía Camino del Molino</i>.
+</small>
+</div>
+<br>
+#### 3.3 Nombre de la vía
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`NOMVIA`**|Nombre o denominación de la calle o vía a la que se adscribe una dirección|Condicional|0,1|Cadena de caracteres|Texto libre| |
+|||||||
+
+Se recomienda utilizar expresiones completas evitando el uso de abreviaturas, si bien pueden tener cabida las abreviaturas más comunes.
+
+Cuando el tipo de vía se trate o se considere como parte del nombre, no se debe rellenar el atributo [`TIPVIA`](../../datos/modelo_de_datos/#32-tipo-de-via).
+
+No es necesario expresar el nombre de vía en aquellas direcciones identificadas mediante un código o número de registro, o un nombre de localización.
+
+Si alguna organización recoge el tipo de vía en un campo aparte, el atributo [`TIPVIA`](../../datos/modelo_de_datos/#22-tipo-de-via) se rellenará. Si la organización no hace esa diferenciación, el tipo de vía vendrá incluido en el atributo [`NOMVIA`](../../datos/modelo_de_datos/#23-nombre-de-la-via) junto con el nombre de la vía y en este caso el atributo [`TIPVIA`](../../datos/modelo_de_datos/#32-tipo-de-via) estará vacío.
+
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Notas:</small></h4>
+En los casos de direcciones con nombre de vía, en los que no consta un número pero sí el nombre de la casa o de la finca, es necesario especificar en el registro el nombre de la vía indicando el nombre de la casa en el atributo <i>Nombre de la localización</i> <a href="../../datos/modelo_de_datos/#35-nombre-de-la-localizacion">[NOMLOC]</a>.
+<br>
+<br>
+En el caso del País Vasco, donde el tipo de vía se coloca generalmente detrás del nombre (Ej: Satrustegi hiribidea, Mirakontxa pasealekua, Zubieta kalea), se recomienda concatenar la información del nombre y tipo de vía conforme a su orden y uso natural dentro del atributo <i>Nombre de la vía</i> <a href="../../datos/modelo_de_datos/#33-nombre-de-la-via">[NOMVIA]</a>, manteniendo vacío el atributo <i>Tipo de vía</i> <a href="../../datos/modelo_de_datos/#32-tipo-de-via">[TIPVIA]</a>.
+</small>
+</div>
+<br>
+#### 3.4 Número de la finca, portal o punto kilométrico
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`NUMERO`**|Localizador o identificación del portal; número; punto km asociado a una dirección|Condicional|0,1|Cadena de caracteres|Texto libre| |
+|||||||
+
+Se entiende como *número* (popularmente así denominado) el localizador que acompaña al nombre de la vía con objeto de identificar una dirección específica dentro de esta.
+
+Aunque generalmente se expresa mediante caracteres numéricos, se admite el uso de textos compuestos numérico-alfabéticos y fórmulas como *bis*, *tris*, *complementario*, *supletorio*, *km*, *edificio*, etc.
+
+Las expresiones que complementan o discriminan una numeración como: bis, tris, supletorio, etc. se deben expresar dentro del atributo [`NUMERO`](../../datos/modelo_de_datos/#34-numero-de-la-finca-portal-o-punto-kilometrico) a continuación del dato de numeración, con un espacio de separación entre ambos.
+
+Se recomienda separar los distintos elementos de este atributo, si los hubiera, mediante espacios en blanco, evitando el uso como separadores de comas, puntos y coma, barras o guiones.
+
+<div class="bs-callout bs-callout-info">
+ <small>
+ <h4><small>Ejemplo: uso del atributo <a href="../../datos/modelo_de_datos/#34-numero-de-la-finca-portal-o-punto-kilometrico">NUMERO</a></small></h4>
+ <ul>
+  	<li>Paseo de las flores 3 bis (NUMERO = 3 bis)</li>
+  	<li>Calle de la vaguada Edificio A (NUMERO = Edificio A)</li>
+  	<li>Autovía de Extremadura km 5 (NUMERO = km 5)</li>
+ </ul>
+ </small>
+</div>
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Nota:</small></h4>
+En el caso de que un portal haga referencia a dos o más números por dar servicio desde la misma entrada a distintos inmuebles, se recomienda generar un registro distinto para cada una de las opciones numerales. Ejemplo: portal rotulado como «Calle del cerezo 12-14» por compartir dos inmuebles el mismo acceso, generaría dos registros:
+<ul>
+  	<li>Calle del cerezo 12</li>
+  	<li>Calle del cerezo 14</li>
+ </ul>
+ </small>
+</div>
+<br>
+#### 3.5 Nombre de la localización
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`NOMLOC`**|Designación alternativa ligada a la dirección o lugar (nombre de edificio, topónimo, POI)|Condicional|0,1|Cadena de caracteres|Texto libre|
+|||||||
+
+Nombre propio por el que se conoce un emplazamiento.
+
+Su uso es opcional cuando el registro de datos corresponde a una dirección ([`TIPDATO`](../../datos/modelo_de_datos/#310-tipo-de-dato) = *Dirección*), siendo obligatorio en los registros cuyo tipo de dato ([`TIPDATO`](../../datos/modelo_de_datos/#310-tipo-de-dato)) sea *Topónimo* o *POI*.
+
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Nota:</small></h4>
+La inclusión de esta información de carácter complementario en los registros de direcciones definidos conforme a la fórmula clásica <i>'calle-número'</i>, permite buscar una dirección tanto por sus datos formales como por su nombre. Ej.: <i>Torre Picasso</i>; <i>Facultad de Filosofía</i>; <i>Palacio de los deportes</i>, <i>Estación de autobuses</i>.
+</small>
+</div>
+<br>
+#### 3.6 Código postal
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`CODPOSTAL`**|Código postal asociado a una dirección|Condicional|0,1|Cadena de caracteres|[Códigos postales](https://www.correos.es/es/es/herramientas/codigos-postales/detalle) de la Sociedad Estatal Correos y Telégrafos|
+|||||||
+
+Su uso es obligatorio cuando el registro de datos corresponde a una dirección ([`TIPDATO`](../../datos/modelo_de_datos/#310-tipo-de-dato)=*Dirección*), no siendo necesario en los registros cuyo tipo de dato ([`TIPDATO`](../../datos/modelo_de_datos/#310-tipo-de-dato)) sea *Topónimo* o *POI*.
+
+No incluir separador de millares.
+
+<br>
+#### 3.7 UNIDADES ADMINISTRATIVAS
+<br>
+
+Los siguientes atributos estructuran por orden de rango las unidades administrativas a las que se asocia una dirección, topónimo o POI.
+
+<br>
+#### 3.7.1 Comunidad/Ciudad Autónoma
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`CA`**|Nombre de la comunidad o ciudad autónoma|Obligatorio|1|Cadena de caracteres|[Lista controlada *Comunidades autónomas*](../../referencias/comunidades_autonomas); [Lista controlada *Ciudades autonomas*](../../referencias/ciudades_autonomas)|
+|||||||
+
+Los textos de los nombres de la comunidad o ciudad autónoma deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas.
+
+<br>
+#### 3.7.2 Provincia
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`PROVINCIA`**|Nombre de la provincia|Obligatorio|1|Cadena de caracteres|[Lista controlada *Provincias*](../../referencias/provincias)|
+|||||||
+
+Los textos de los nombres de provincia deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas.
+
+<br>
+#### 3.7.3. Municipio
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`MUNICIPIO`**|Nombre del municipio|Obligatorio|1|Cadena de caracteres|[Lista controlada *Municipios*](../../referencias/municipios)|
+|||||||
+
+Los textos de los nombres de municipio deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas.
+
+<br>
+#### 3.7.4 Primer nivel
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`NIVEL1`**|Agrupación de direcciones de primer nivel, de orden inferior al municipio: *entidad colectiva*, *parroquia*, *diputación*, *entidad singular*, *núcleo urbano*, *población*, *distrito*, *sección*, *barrio*, *aldea*, *urbanización*, *polígono industrial*, *diseminado*, etc.|Opcional|0,1|cadena de caracteres|Texto libre|
+|||||||
+
+Existen muchas posibilidades de estructurar y jerarquizar una dirección por debajo del nivel del municipio, siendo la casuística muy variada.
+
+En este modelo se ha establecido la posibilidad de definir hasta dos niveles de jerarquización ([`NIVEL1`](../../datos/modelo_de_datos/#374-primer-nivel) y [`NIVEL2`](../../datos/modelo_de_datos/#375-segundo-nivel)) de orden inferior al municipio, pudiendo ser estos niveles los que dicta la práctica y la costumbre de cada caso o territorio, no fijándose de antemano una estructura específica.
+
+Los textos de los nombres de agrupamiento de direcciones de primer nivel deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas y de fórmulas de indexación, por ejemplo: «El Escorial», siendo las formas no recomendadas «Escorial, El», «Escorial (El)».
+
+<div class="bs-callout bs-callout-info">
+ <small>
+ <h4><small>Ejemplos: NIVEL1</small></h4>
+ Ejemplos de uso del atributo <a href="../../datos/modelo_de_datos/#374-primer-nivel">NIVEL1</a>
+ <table class="table table-bordered">
+  <thead>
+  	<tr>
+  		<th>NIVEL1</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td><i>(distrito)</i></td>
+  	</tr>
+  	<tr>
+  		<td><i>(aldea)</i></td>
+  	</tr>
+  	<tr>
+  		<td><i>(entidad singular)</i></td>
+  	</tr>
+  	<tr>
+  		<td><i>(parroquia)</i></td>
+  	</tr>
+	<tr>
+  		<td><i>(polígono industrial)</td>
+  	</tr>
+  </tbody>
+ </table>
+ </small>
+</div>
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Notas:</small></h4>
+Dado que pueden existir poblaciones pertenecientes a un mismo municipio que tengan nombres de calles coincidentes, su uso es obligado en los casos de direcciones que se encuentren en el ámbito urbano.
+<br>
+<br>
+Para direcciones en el ámbito rústico su uso es opcional.
+</small>
+</div>
+
+<br>
+#### 3.7.5 Segundo nivel
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`NIVEL2`**|Agrupación de direcciones de segundo nivel, de orden inferior al municipio: *entidad colectiva*, *parroquia*, *diputación*, *entidad singular*, *núcleo urbano*, *población*, *distrito*, *sección*, *barrio*, *aldea*, *urbanización*, *polígono industrial*, *diseminado*, etc.|Opcional|0,1|Cadena de caracteres|Texto libre|
+|||||||
+
+Información de una agrupación de direcciones de orden inferior al primer nivel, cuando dicha pertenencia participa en la estructura formal de una dirección.
+
+Los textos de los nombres de agrupamiento de direcciones de segundo nivel deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas y de fórmulas de indexación.
+
+<div class="bs-callout bs-callout-info">
+ <small>
+ <h4><small>Ejemplos: NIVEL1 y NIVEL2</small></h4>
+ Ejemplos de uso de los atributos <a href="../../datos/modelo_de_datos/#374-primer-nivel">NIVEL1</a> y <a href="../../datos/modelo_de_datos/#375-segundo-nivel">NIVEL2</a>
+ <table class="table table-bordered">
+  <thead>
+  	<tr>
+  		<th>NIVEL1</th>
+  		<th>NIVEL2</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td><i>(distrito)</i></td>
+  		<td><i>(barrio)</i></td>
+  	</tr>
+  	<tr>
+  		<td><i>(aldea)</i></td>
+  		<td><i>(diseminado)</i></td>
+  	</tr>
+  	<tr>
+  		<td><i>(entidad singular)</i></td>
+  		<td><i>(población)</i></td>
+  	</tr>
+  	<tr>
+  		<td><i>(parroquia)</i></td>
+  		<td><i>(núcleo urbano)</i></td>
+	</tr>
+  	<tr>
+  		<td><i>(polígono industrial)</td>
+  		<td><i>(null)</i></td>
+  	</tr>
+  </tbody>
+ </table>
+ </small>
+</div>
+
+<br>
+#### 3.8 Código INE de tramo
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`INETRA`**|Código INE de tramo (16 dígitos)|Opcional|0,1|Cadena de caracteres|Código INE de tramo|
+|||||||
+
+Formación del código de tramo de 16 dígitos: 2 dígitos de la provincia, 3 del municipio, 2 de la entidad colectiva, 2 de la entidad singular, 2 de núcleo o diseminado, 5 del tramo, correlativos. No confundir con el código de vial corto de 10 posiciones.
+
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Nota:</small></h4>
+Recomendación para construir los 5 dígitos del tramo cuando aún no lo ha establecido el INE: definir 5 dígitos de alarma que indique que el código está en espera de que lo defina el INE. Ejemplo para vías en una misma población: X0001, X0002, X0003…
+</small>
+</div>
+<br>
+#### 3.9 Lengua
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`LENGUA`**|Lengua utilizada en la expresión de una dirección, topónimo o punto de interés|Opcional|0,1|Cadena de caracteres|[Lista controlada lenguas ISO 639-3](../../referencias/lenguas)|
+|||||||
+
+Este atributo permite acotar el ámbito de la búsqueda de una dirección a un subconjunto de registros en función de la lengua en la que se encuentran expresados.
+
+La codificación de tres (3) caracteres que se propone, es conforme con la norma [ISO 639-3](https://iso639-3.sil.org/code_tables/639/data).
+
+<small>
+  <table class="table table-bordered">
+  <thead>
+  	<tr>
+  		<th>Código ISO 639-3</th>
+  		<th>Lengua</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<tr>
+  		<td>ast</td>
+  		<td>Asturleonés | Asturiano | Llingua Asturiana | Bable| Leonés</td>
+  	</tr>
+  	<tr>
+ 		<td>arg</td>
+  		<td>Aragonés | Altoaragonés | Fabla aragonesa</td>
+  	</tr>
+  	<tr>
+  		<td>glg</td>
+  		<td>Gallego | Galego</td>
+  	</tr>
+  	<tr>
+  		<td>eus</td>
+  		<td>Vasco | Euskera | Vascuence | Lengua vasca</td>
+  	</tr>
+  	<tr>
+  		<td>cat</td>
+  		<td>Catalán | Català | Valenciano | Valencià |Catalán-Valenciano-Balear | Català-Valencià-Balear</td>
+  	</tr>
+  	<tr>
+  		<td>spa</td>
+  		<td>Español | Castellano</td>
+  	</tr>
+  	<tr>
+  		<td>oci</td>
+  		<td>Aranés</td>
+  	</tr>
+  </tbody>
+  </table>
+</small>
+
+<br>
+#### 3.10 Tipo de dato
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`TIPDATO`**|Tipología del registro de datos conforme a la naturaleza de la información|Obligatorio|1|Cadena de caracteres|[Lista controlada *Tipos de dato*](../../referencias/tipos_de_dato)|
+|||||||
+
+Recoge la tipología del registro de datos con objeto de su aplicación en el algoritmo de búsqueda:
+
+- *Dirección*: Identificación de la localización fija de una finca o edificación por medio de una composición estructurada de nombres geográficos e identificadores.
+- *Topónimo*: Término toponímico o nombre geográfico.
+- *POI*: Ubicación geográfica de un punto de interés (POI), que no corresponde a una dirección formal.
+
+Este atributo permite acotar el ámbito de la búsqueda de una dirección, topónimo o POI a un subconjunto de registros en función de su tipología.
+<br>
+#### 3.11 Estado
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`ESTADO`**|Estatus de una dirección o nombre geográfico|Obligatorio|1|Cadena de caracteres|[Lista controlada *Estados del dato*](../../referencias/estados_del_dato)|
+|||||||
+
+ Información que permite discernir qué crédito debe darse a la información con respecto a su oficialidad, grado de normalización y/o su vigencia.
+
+- *Oficial*: Información actualmente en uso, aprobada oficialmente por la administración competente o establecida por la legislación.
+- *Normalizado*: Información actualmente en uso, aceptada o recomendada por un órgano que tenga asignada una función asesora o tenga facultad de decisión en materia de direcciones o toponimia.
+- *Histórico*: Información actualmente en desuso o sin vigencia administrativa.
+- *Otro*: Información actualmente en uso que no tienen ningún estatus oficial, ni ha sido aprobada por ningún órgano.
+
+Fuente: [*Reglamento (UE) Nº 1089/2010*](https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2010:323:0011:0102:Es:PDF).
+
+Este atributo permite acotar el ámbito de la búsqueda de una dirección, topónimo o POI a un subconjunto de registros en función de su estado.
+
+<br>
+#### 3.12 Proveedor
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`PROVEEDOR`**|Proveedor de datos de la información del registro, señalando mediante una codificación el organismo o institución que suministra la información|Obligatorio|1|Cadena de caracteres|[Lista controlada *Proveedores de datos*](../../referencias/proveedores_de_datos)|
+|||||||
+
+Como la procedencia de los datos puede ser muy variada, se propone utilizar una lista controlada de códigos de proveedor para hacer referencia al productor/suministrador.
+
+Este atributo permite acotar el ámbito de la búsqueda de una dirección, topónimo o POI a un subconjunto de registros en función del organismo productor/suministrador.
+
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Nota:</small></h4>
+Poder integrar de forma flexible datos de distintas procedencias y formatos en un servicio común de geocodificación de direcciones, ofrece la posibilidad de adaptar la metodología de la recopilación de información a las necesidades y posibilidades de cada productor. De esta manera los datos de direcciones recopilados por una comunidad autónoma, administración local u organismo público, se podrían actualizar remitiéndolos a un repositorio común (P.ej. <i>Cartociudad</i>) para su indexación, o bien ser recopilados de forma automática y periódica a partir de un servicio de publicación on line o de un fichero en red.
+</small>
+</div>
+<br>
+#### 3.13 GEOMETRÍA
+<br>
+
+Expresión de las coordenadas que definen la ubicación geográfica de un registro de datos, representado mediante un objeto puntual.
+
+- Los datos de latitud y longitud deben estar referidos al Sistema Geográfico de Referencia [EPSG:4258](https://epsg.io/4258).  
+>Unidades: Grados  
+>CRS: [ETRS89](https://epsg.io/4936)  
+>Datum: [European Terrestrial Reference System 1989 (ETRS89)](https://epsg.io/6258-datum)  
+>Ellipsoid: [GRS 1980](https://epsg.io/7019-ellipsoid)  
+>Meridiano de referencia: Meridiano de Greenwich  
+- Usar la notación en grados y decimales de grado hasta la 6ª cifra decimal.  
+- Utilizar el carácter punto (.) como separador decimal.  
+- NO UTILIZAR el formato en grados sexagesimales como una cadena de valores expresado en grados, minutos y segundos.
+
+<div class="bs-callout bs-callout-info">
+<small>
+<h4><small>Nota:</small></h4>
+La norma <a href="https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma?c=N0045047">UNE-EN ISO 6709:2010 “Representación normalizada de localizaciones geográficas puntuales mediante coordenadas. (ISO 6709:2008, incluyendo Cor 1:2009)"</a> recomienda el uso de grados decimales para el intercambio de datos informáticos de latitud y longitud en formato digital, si bien permite el uso de notaciones sexagesimales para visualizar la latitud y la longitud (grados, minutos y minutos decimales o grados, minutos, segundos y segundos decimales).
+</small>
+</div>
+
+<br>
+#### 3.13.1 Latitud
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`LATITUD`**|Valor de la *latitud* de la geometría puntual|Obligatorio|1|Numérico decimal|-90.00<=latitud<=+90.00|
+|||||||
+
+<br>
+#### 3.13.2 Longitud
+<br>
+
+|Nombre|Definición|Obligación|Ocurrencia|Tipo de dato|Dominio|
+|---|---|---|---|---|---|
+|**`LONGITUD`**|Valor de la *longitud* de la geometría puntual|Obligatorio|1|Numérico decimal|-180.00<=longitud<=+180.00|
+|||||||
+
+<br>
+### 4. Formato del fichero
+<br>
+
+El formato de fichero de intercambio de datos debe ser conforme con el estándar CSV (*Comma-Separated Values*) [[RFC 4180]](https://datatracker.ietf.org/doc/html/rfc4180), utilizando como separador de los atributos el carácter *punto y coma* (;).
+
+Cada registro (dirección, topónimo, punto de interés) se define mediante una línea adicional en el fichero.
+
+Las coordenadas latitud, longitud, se deben expresan en formato geográfico decimal en el Sistema Geográfico de Referencia [EPSG:4258](https://epsg.io/4258), utilizando el carácter *punto* (.) como separador decimal.
+
+Los datos de latitud y longitud deben indicarse con al menos cinco (5) cifras decimales de precisión geográfica.
+
+Codificación de caracteres: [UTF-8 sin BOM](https://es.wikipedia.org/wiki/UTF-8).
+
+<br>
+
+***

@@ -1,0 +1,17 @@
+## TIPOS DE DATO
+<br />
+
+Recoge la tipología del registro de datos con objeto de su aplicación en el algoritmo de búsqueda:
+
+Se utiliza para cumplimentar el atributo [**`TIPDATO`**](../../datos/modelo_de_datos#215-tipo-de-dato).
+
+|Tipo|Definición|
+|---|---|
+|Dirección|Identificación de la localización fija de una finca o edificación por medio de una composición estructurada de nombres geográficos e identificadores|
+|Topónimo|Término toponímico o nombre geográfico|
+|POI|Ubicación geográfica de un punto de interés (POI), que no corresponde a una dirección formal|
+|||
+
+<br />
+
+***
