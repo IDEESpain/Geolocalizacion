@@ -277,9 +277,10 @@
                 <li class="third-level"><a href="#37-unidades-administrativas">3.7 UNIDADES ADMINISTRATIVAS</a></li>
                 <li class="third-level"><a href="#371-comunidadciudad-autonoma">3.7.1 Comunidad/Ciudad Autónoma</a></li>
                 <li class="third-level"><a href="#372-provincia">3.7.2 Provincia</a></li>
-                <li class="third-level"><a href="#373-municipio">3.7.3. Municipio</a></li>
-                <li class="third-level"><a href="#374-primer-nivel">3.7.4 Primer nivel</a></li>
-                <li class="third-level"><a href="#375-segundo-nivel">3.7.5 Segundo nivel</a></li>
+                <li class="third-level"><a href="#373-islacomarca">3.7.3 Isla/Comarca</a></li>
+                <li class="third-level"><a href="#374-municipio">3.7.4. Municipio</a></li>
+                <li class="third-level"><a href="#375-primer-nivel">3.7.5 Primer nivel</a></li>
+                <li class="third-level"><a href="#376-segundo-nivel">3.7.6 Segundo nivel</a></li>
                 <li class="third-level"><a href="#38-codigo-ine-de-tramo">3.8 Código INE de tramo</a></li>
                 <li class="third-level"><a href="#39-lengua">3.9 Lengua</a></li>
                 <li class="third-level"><a href="#310-tipo-de-dato">3.10 Tipo de dato</a></li>
@@ -757,7 +758,42 @@ La inclusión de esta información de carácter complementario en los registros 
 </table>
 <p>Los textos de los nombres de provincia deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas.</p>
 <p><br></p>
-<h4 id="373-municipio">3.7.3. Municipio</h4>
+<h4 id="373-islacomarca">3.7.3 Isla/Comarca</h4>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Nombre</th>
+<th>Definición</th>
+<th>Obligación</th>
+<th>Ocurrencia</th>
+<th>Tipo de dato</th>
+<th>Dominio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>ISLACOMARC</code></strong></td>
+<td>Nombre de la isla, comarca o agrupación de direcciones supramunicipal</td>
+<td>Opcional</td>
+<td>0,1</td>
+<td>Cadena de caracteres</td>
+<td>Texto libre</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Nombre de la isla, comarca o agrupación de direcciones supramunicipal.</p>
+<p>El texto del nombre debe expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas.</p>
+<p><br></p>
+<h4 id="374-municipio">3.7.4. Municipio</h4>
 <p><br></p>
 <table>
 <thead>
@@ -791,7 +827,7 @@ La inclusión de esta información de carácter complementario en los registros 
 </table>
 <p>Los textos de los nombres de municipio deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas.</p>
 <p><br></p>
-<h4 id="374-primer-nivel">3.7.4 Primer nivel</h4>
+<h4 id="375-primer-nivel">3.7.5 Primer nivel</h4>
 <p><br></p>
 <table>
 <thead>
@@ -824,12 +860,12 @@ La inclusión de esta información de carácter complementario en los registros 
 </tbody>
 </table>
 <p>Existen muchas posibilidades de estructurar y jerarquizar una dirección por debajo del nivel del municipio, siendo la casuística muy variada.</p>
-<p>En este modelo se ha establecido la posibilidad de definir hasta dos niveles de jerarquización (<a href="../../datos/modelo_de_datos/#374-primer-nivel"><code>NIVEL1</code></a> y <a href="../../datos/modelo_de_datos/#375-segundo-nivel"><code>NIVEL2</code></a>) de orden inferior al municipio, pudiendo ser estos niveles los que dicta la práctica y la costumbre de cada caso o territorio, no fijándose de antemano una estructura específica.</p>
+<p>En este modelo se ha establecido la posibilidad de definir hasta dos niveles de jerarquización (<a href="../../datos/modelo_de_datos/#375-primer-nivel"><code>NIVEL1</code></a> y <a href="../../datos/modelo_de_datos/#376-segundo-nivel"><code>NIVEL2</code></a>) de orden inferior al municipio, pudiendo ser estos niveles los que dicta la práctica y la costumbre de cada caso o territorio, no fijándose de antemano una estructura específica.</p>
 <p>Los textos de los nombres de agrupamiento de direcciones de primer nivel deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas y de fórmulas de indexación, por ejemplo: «El Escorial», siendo las formas no recomendadas «Escorial, El», «Escorial (El)».</p>
 <div class="bs-callout bs-callout-info">
  <small>
  <h4><small>Ejemplos: NIVEL1</small></h4>
- Ejemplos de uso del atributo <a href="../../datos/modelo_de_datos/#374-primer-nivel">NIVEL1</a>
+ Ejemplos de uso del atributo <a href="../../datos/modelo_de_datos/#375-primer-nivel">NIVEL1</a>
  <table class="table table-bordered">
   <thead>
     <tr>
@@ -867,7 +903,7 @@ Para direcciones en el ámbito rústico su uso es opcional.
 </div>
 
 <p><br></p>
-<h4 id="375-segundo-nivel">3.7.5 Segundo nivel</h4>
+<h4 id="376-segundo-nivel">3.7.6 Segundo nivel</h4>
 <table>
 <thead>
 <tr>
@@ -903,7 +939,7 @@ Para direcciones en el ámbito rústico su uso es opcional.
 <div class="bs-callout bs-callout-info">
  <small>
  <h4><small>Ejemplos: NIVEL1 y NIVEL2</small></h4>
- Ejemplos de uso de los atributos <a href="../../datos/modelo_de_datos/#374-primer-nivel">NIVEL1</a> y <a href="../../datos/modelo_de_datos/#375-segundo-nivel">NIVEL2</a>
+ Ejemplos de uso de los atributos <a href="../../datos/modelo_de_datos/#375-primer-nivel">NIVEL1</a> y <a href="../../datos/modelo_de_datos/#376-segundo-nivel">NIVEL2</a>
  <table class="table table-bordered">
   <thead>
     <tr>
@@ -1181,12 +1217,12 @@ Poder integrar de forma flexible datos de distintas procedencias y formatos en u
 <p><br></p>
 <p>Expresión de las coordenadas que definen la ubicación geográfica de un registro de datos, representado mediante un objeto puntual.</p>
 <ul>
-<li>Los datos de latitud y longitud deben estar referidos al Sistema Geográfico de Referencia <a href="https://epsg.io/4258">EPSG:4258</a>.  <blockquote>
+<li>Los datos de <em>latitud</em> y <em>longitud</em> deben estar referidos al Sistema Geográfico de Referencia <a href="https://epsg.io/4326">EPSG:4326</a>.  <blockquote>
 <p>Unidades: Grados<br />
-CRS: <a href="https://epsg.io/4936">ETRS89</a><br />
-Datum: <a href="https://epsg.io/6258-datum">European Terrestrial Reference System 1989 (ETRS89)</a><br />
-Ellipsoid: <a href="https://epsg.io/7019-ellipsoid">GRS 1980</a><br />
-Meridiano de referencia: Meridiano de Greenwich  </p>
+CRS: <a href="https://epsg.io/4979">WGS 84</a><br />
+Datum: <a href="https://epsg.io/6326-datum">Word Geodetic System 1984</a><br />
+Ellipsoid: <a href="https://epsg.io/7030-ellipsoid">WGS 84</a><br />
+Meridiano de referencia: <a href="https://epsg.io/8901-primem">Meridiano de Greenwich</a>  </p>
 </blockquote>
 </li>
 <li>Usar la notación en grados y decimales de grado hasta la 5ª cifra decimal.  </li>
