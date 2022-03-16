@@ -1217,15 +1217,26 @@ Poder integrar de forma flexible datos de distintas procedencias y formatos en u
 <p><br></p>
 <p>Expresión de las coordenadas que definen la ubicación geográfica de un registro de datos, representado mediante un objeto puntual.</p>
 <ul>
-<li>Los datos de <em>latitud</em> y <em>longitud</em> deben estar referidos al Sistema Geográfico de Referencia <a href="https://epsg.io/4326">EPSG:4326</a>.  <blockquote>
-<p>Unidades: Grados<br />
-CRS: <a href="https://epsg.io/4979">WGS 84</a><br />
-Datum: <a href="https://epsg.io/6326-datum">Word Geodetic System 1984</a><br />
-Ellipsoid: <a href="https://epsg.io/7030-ellipsoid">WGS 84</a><br />
-Meridiano de referencia: <a href="https://epsg.io/8901-primem">Meridiano de Greenwich</a>  </p>
+<li>
+<p>Los datos de <em>latitud</em> y <em>longitud</em> deben estar referidos al Sistema Geográfico de Referencia:  </p>
+<blockquote>
+<p>PENÍNSULA, ISLAS BALEARES, CEUTA Y MELILLA:<br />
+- Unidades: Grados<br />
+- CRS: ETRS89<br />
+- Datum: European Terrestrial Reference System 1989<br />
+- Ellipsoid: GRS 1980<br />
+- Meridiano de referencia: Meridiano de Greenwich  </p>
+<p>ISLAS CANARIAS:<br />
+- Unidades: Grados<br />
+- CRS: REGCAN95<br />
+- Datum: Red Geodésica de Canarias 1995<br />
+- Ellipsoid: GRS 1980<br />
+- Meridiano de referencia: Meridiano de Greenwich</p>
 </blockquote>
 </li>
-<li>Usar la notación en grados y decimales de grado hasta la 5ª cifra decimal.  </li>
+<li>
+<p>Usar la notación en grados y decimales de grado hasta la 5ª cifra decimal.  </p>
+</li>
 <li>Utilizar el carácter punto (.) como separador decimal.  </li>
 <li>NO UTILIZAR el formato en grados sexagesimales como una cadena de valores expresado en grados, minutos y segundos.</li>
 </ul>
@@ -1307,7 +1318,6 @@ La norma <a href="https://www.une.org/encuentra-tu-norma/busca-tu-norma/norma?c=
 <p><br></p>
 <p>El formato de fichero de intercambio de datos debe ser conforme con el estándar CSV (<em>Comma-Separated Values</em>) <a href="https://datatracker.ietf.org/doc/html/rfc4180">[RFC 4180]</a>, utilizando como separador de los atributos el carácter <em>punto y coma</em> (;).</p>
 <p>Cada registro (dirección, topónimo, punto de interés) se define mediante una línea adicional en el fichero.</p>
-<p>Las coordenadas latitud, longitud, se deben expresan en formato geográfico decimal en el Sistema Geográfico de Referencia <a href="https://epsg.io/4326">EPSG:4326</a>, utilizando el carácter <em>punto</em> (.) como separador decimal.</p>
 <p>Los datos de latitud y longitud deben indicarse con al menos cinco (5) cifras decimales de precisión geográfica.</p>
 <p>Codificación de caracteres: <a href="https://es.wikipedia.org/wiki/UTF-8">UTF-8 sin BOM</a>.</p>
 <p><br></p>
