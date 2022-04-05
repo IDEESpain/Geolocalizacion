@@ -2,107 +2,107 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/api/autocompletar/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/api/geocodificacion_directa/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/api/geocodificacion_estructurada/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/api/geocodificacion_inversa/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/api/informacion_general/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/api/no_disponible/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/datos/fuentes_de_datos/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/datos/modelo_de_datos/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/datos/no_disponible/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/ejemplos/no_disponible/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/abreviaturas/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/ciudades_autonomas/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/comunidades_autonomas/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/estados_del_dato/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/lenguas/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/municipios/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/poblaciones/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/proveedores_de_datos/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/provincias/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/referencias/tipos_de_dato/</loc>
-         <lastmod>2022-03-31</lastmod>
+         <lastmod>2022-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
