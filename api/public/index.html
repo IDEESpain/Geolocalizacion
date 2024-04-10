@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	  <meta name="mapea" content="yes">
+	  <title>Locator TEST</title>
+	  <link href="https://componentes.cnig.es/api-core/assets/css/apiign.ol.min.css" rel="stylesheet" />
+	  <link href="https://componentes.cnig.es/api-core/plugins/locatorscn/locatorscn.ol.min.css" rel="stylesheet" />
+	  <style rel="stylesheet">
+	    html,
+	    body {
+	      margin: 0;
+	      padding: 0;
+	      height: 100%;
+	      overflow: hidden;
+	    }
+	  </style>
+
+	</head>
+
+	<body>
+	  <script type="text/javascript" src="https://componentes.cnig.es/api-core/js/apiign.ol.min.js"></script>
+	  <script type="text/javascript" src="https://componentes.cnig.es/api-core/js/configuration.js"></script>
+	  <script type="text/javascript" src="https://componentes.cnig.es/api-core/plugins/locatorscn/locatorscn.ol.min.js"></script>
+
+	  <div id="mapjs" class="container">
+	  	
+	  	<script type="text/javascript">
+
+	  		M.language.setLang("es");
+
+			M.proxy(false);
+
+			const map = M.map({
+			  container: "mapjs",
+			  zoom: 5,
+			  maxZoom: 20,
+			  minZoom: 4,
+			  center: [-467062.8225, 4783459.6216]
+			});
+
+			window.map = map;
+
+			const pluginLocator = new M.plugin.Locatorscn({
+			  useProxy: false,
+			  isDraggable: true,
+			  position: 'TC',
+			  // position: 'TC',
+			  collapsible: true,
+			  collapsed: true,
+			  order: 1,
+			  tooltip: 'Plugin Localizador SCNE',
+			  zoom: 5,
+			  pointStyle: 'pinMorado',
+
+			  searchOptions: {
+			    addendum: 'scne',
+			    size: 8,
+			    layers: 'address,street,venue',
+			    //sources: 'calrj',
+			    radius: 0.5,
+			    urlAutocomplete: './autocomplete',
+			    urlReverse: './reverse',
+			  }
+			});
+
+			map.addPlugin(pluginLocator);
+
+			window.map = map;
+			window.pl = pluginLocator;
+	  			
+	  	</script>	
+
+	  </div>
+	</body>
+
+</html>

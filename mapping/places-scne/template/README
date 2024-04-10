@@ -1,0 +1,7 @@
+# Notas
+- El script se debe ejecutar desde el mismo directorio.
+- El script elimina y crea el template.
+- El template solo se ejecuta la primera vez y/o cuando se modifique alguna propiedad que requiera actualizarlo.
+- El template tiene integrados los sinónimos.
+- El cuerpo del template está en el fichero places_template.txt .
+- La creación del índice usará el último template ejecutado.

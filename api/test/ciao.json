@@ -1,0 +1,8 @@
+{
+  "defaults": {
+    "protocol": "http",
+    "host": "localhost",
+    "port": 3100
+  },
+  "config": {}
+}

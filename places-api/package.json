@@ -1,0 +1,36 @@
+{
+  "name": "places-api",
+  "version": "1.0.0",
+  "author": "pmperez@larioja.org",
+  "description": "Places API",
+  "homepage": "https://www.iderioja.larioja.org",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": "./bin/start",
+  "scripts": {
+    "lint": "jshint .",
+    "start": "./bin/start",
+    "validate": "npm ls",
+    "prune": "npm prune"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "@elastic/elasticsearch": "^7.0.0",
+    "express": "^4.17.3",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "jshint": "^2.10.1"
+  },
+  "pre-commit": [
+    "lint",
+    "prune"
+  ],
+  "release": {
+    "branch": "master",
+    "success": []
+  }
+}

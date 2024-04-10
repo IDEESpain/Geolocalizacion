@@ -1,0 +1,90 @@
+{
+  "name": "pelias-api",
+  "version": "5.43.0",
+  "author": "pelias",
+  "description": "Pelias API",
+  "homepage": "https://github.com/pelias/api",
+  "license": "MIT",
+  "main": "index.js",
+  "bin": "./bin/start",
+  "scripts": {
+    "ciao": "node node_modules/ciao/bin/ciao -c test/ciao.json test/ciao",
+    "coverage": "node_modules/.bin/istanbul cover test/unit/run.js",
+    "docs": "./bin/generate-docs",
+    "lint": "jshint .",
+    "start": "./bin/start",
+    "test": "npm run unit",
+    "ci": "npm test",
+    "unit": "./bin/units",
+    "validate": "npm ls",
+    "config": "node -e \"console.log(JSON.stringify(require( 'pelias-config' ).generate(require('./schema')), null, 2))\"",
+    "prune": "npm prune"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pelias/api.git"
+  },
+  "keywords": [
+    "pelias",
+    "elasticsearch",
+    "webview"
+  ],
+  "bugs": {
+    "url": "https://github.com/pelias/api/issues"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "@hapi/joi": "^16.0.1",
+    "@mapbox/geojson-extent": "^1.0.0",
+    "async": "^3.0.1",
+    "elasticsearch": "^16.0.0",
+    "express": "^4.8.8",
+    "geojson": "^0.5.0",
+    "geolib": "^3.0.0",
+    "iso-639-3": "^1.0.0",
+    "locale": "^0.1.0",
+    "lodash": "^4.17.4",
+    "markdown": "^0.5.0",
+    "morgan": "^1.8.2",
+    "pelias-compare": "^0.1.16",
+    "pelias-config": "^5.0.1",
+    "pelias-labels": "^1.16.1",
+    "pelias-logger": "^1.2.0",
+    "pelias-microservice-wrapper": "^1.10.0",
+    "pelias-model": "^9.0.0",
+    "pelias-parser": "2.2.0",
+    "pelias-query": "^11.0.0",
+    "pelias-sorting": "^1.2.0",
+    "predicates": "^2.0.0",
+    "regenerate": "^1.4.0",
+    "remove-accents": "^0.4.2",
+    "require-all": "^3.0.0",
+    "retry": "^0.12.0",
+    "stable": "^0.1.8",
+    "stats-lite": "^2.0.4",
+    "through2": "^3.0.0"
+  },
+  "devDependencies": {
+    "ciao": "^2.0.0",
+    "difflet": "^1.0.1",
+    "istanbul": "^0.4.2",
+    "jshint": "^2.10.1",
+    "pelias-mock-logger": "^1.3.0",
+    "precommit-hook": "^3.0.0",
+    "proxyquire": "^2.0.0",
+    "tap-dot": "^2.0.0",
+    "tape": "^5.1.1"
+  },
+  "pre-commit": [
+    "lint",
+    "prune",
+    "validate",
+    "test"
+  ],
+  "release": {
+    "branch": "master",
+    "success": []
+  }
+}

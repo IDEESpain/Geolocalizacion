@@ -1,0 +1,86 @@
+version: "3"
+networks:
+  default:
+    external:
+      name: pelias_default
+services:
+  api-ign:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    container_name: pelias_api-7-ign
+    user: "pelias"
+    restart: always
+    environment: [ "PORT=4000" ]
+    ports: [ "8081:4000" ]
+    volumes:
+      - "./pelias.json:/code/pelias.json"
+  libpostal-ign:
+    image: pelias/libpostal-service
+    container_name: pelias_libpostal-7-ign
+    user: "pelias"
+    restart: always
+    ports: [ "8082:4400" ]
+  places-scn:
+    build:
+      context: ./places-api
+      dockerfile: Dockerfile
+    container_name: places_scn
+    user: "pelias"
+    restart: always
+    environment: [ "PORT=4600" ]
+    ports: [ "8083:4600" ]
+  # ---------------------------------------------------------------------------------------------
+  # NO UTILIZADO:
+  # schema:
+  #   image: pelias/schema:master
+  #   container_name: pelias_schema-7
+  #   user: "pelias"
+  #   volumes:
+  #     - "./pelias.json:/code/pelias.json"      
+  # placeholder:
+  #   image: pelias/placeholder:master
+  #   container_name: pelias_placeholder-7
+  #   user: "pelias"
+  #   restart: always
+  #   environment: ["PORT=4100"]
+  #   ports: ["4101:4100"]
+  #   volumes:
+  #     - "./pelias.json:/code/pelias.json"
+  #     - "${DATA_DIR}:/data"
+  #     - "./blacklist/:/data/blacklist"
+  # csv-importer:
+  #   image: pelias/csv-importer:master
+  #   container_name: pelias_csv_importer-7
+  #   user: "pelias"
+  #   volumes:
+  #     - "./pelias.json:/code/pelias.json"
+  #     - "${DATA_DIR}:/data"
+  #     - "./blacklist/:/data/blacklist"
+  # polylines:
+  #   image: pelias/polylines:master
+  #   container_name: pelias_polylines-7
+  #   user: "pelias"
+  #   volumes:
+  #     - "./pelias.json:/code/pelias.json"
+  #     - "${DATA_DIR}:/data"
+  # interpolation:
+  #   image: pelias/interpolation:master
+  #   container_name: pelias_interpolation-7
+  #   user: "pelias"
+  #   restart: always
+  #   environment: ["PORT=4300"]
+  #   ports: ["4301:4300"]
+  #   volumes:
+  #     - "./pelias.json:/code/pelias.json"
+  #     - "${DATA_DIR}:/data"
+  # pip:
+  #   image: pelias/pip-service:master
+  #   container_name: pelias_pip-service-7
+  #   user: "pelias"
+  #   restart: always
+  #   environment: ["PORT=4200"]
+  #   ports: ["4201:4200"]
+  #   volumes:
+  #     - "./pelias.json:/code/pelias.json"
+  #     - "${DATA_DIR}:/data"

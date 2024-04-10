@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyecto de geocodificación de direcciones. Comisión Especializada de Normas Geográficas. España">
+    <meta name="author" content="Gonzalo López García">
+    <link rel="canonical" href="https://example.com/">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    
+    <title>Home - Geocodificador SCN</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body class="homepage" >
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href=".">Geocodificador SCN</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Datos <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="datos/modelo_de_datos/">Modelo de datos</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="datos/fuentes_de_datos/">Fuentes de datos</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">API <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="api/informacion_general/">Información general</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Métodos</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="api/geocodificacion_directa/">Geocodificación directa</a>
+</li>
+
+        
+            
+<li >
+    <a href="api/geocodificacion_inversa/">Geocodificación inversa</a>
+</li>
+
+        
+            
+<li >
+    <a href="api/autocompletar/">Autocompletar</a>
+</li>
+
+        
+            
+<li >
+    <a href="api/geocodificacion_estructurada/">Geocodificación estructurada</a>
+</li>
+
+        
+            
+<li >
+    <a href="api/no_disponible/">Lugar</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="api/no_disponible/">Formato de la respuesta</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Referencias <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="referencias/abreviaturas/">Abreviaturas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/ciudades_autonomas/">Ciudades autónomas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/comunidades_autonomas/">Comunidades autónomas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/estados_del_dato/">Estados del dato</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/lenguas/">Lenguas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/municipios/">Municipios</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/poblaciones/">Poblaciones</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/proveedores_de_datos/">Proveedores de datos</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/provincias/">Provincias</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="referencias/tipos_de_dato/">Tipos de dato</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="ejemplos/no_disponible/">Ejemplos</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="datos/modelo_de_datos/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/cenormasgeograficas/geocodificador/edit/master/docs/index.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#servicio-de-geocodificacion-de-direcciones-del-sistema-cartografico-nacional-espana">SERVICIO DE GEOCODIFICACIÓN DE DIRECCIONES DEL SISTEMA CARTOGRÁFICO NACIONAL (ESPAÑA)</a></li>
+            <li class="second-level"><a href="#geocodificacion-de-direcciones">Geocodificación de direcciones</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h2 id="servicio-de-geocodificacion-de-direcciones-del-sistema-cartografico-nacional-espana">SERVICIO DE GEOCODIFICACIÓN DE DIRECCIONES DEL SISTEMA CARTOGRÁFICO NACIONAL (ESPAÑA)</h2>
+<p><br /></p>
+<p>El 14 de diciembre de 2020 la <em>Comisión Especializada de Normas Geográficas</em> (1) del <em>Consejo Superior Geográfico</em> de España, puso en marcha un subgrupo de trabajo para la realización del proyecto <em>"Especificaciones básicas para la implementación de un Servicio Nacional de Geocodificación de Direcciones"</em>.</p>
+<p><br /></p>
+<h3 id="geocodificacion-de-direcciones">Geocodificación de direcciones</h3>
+<p><br />
+<img alt="Placa del Paseo de la Dirección (fuente:Wikimedia)" src="img/placa_del_paseo_de_la_direccion.jpg" title="Placa del Paseo de la Dirección (fuente:Wikimedia)" />
+<br />
+<br /></p>
+<p>La geocodificación es el proceso que permite obtener la ubicación de un lugar a partir del dato de su dirección, de su nombre, o de un identificador.</p>
+<p>Este proceso de geocodificación, aplicado a un archivo que incluya información de direcciones, permite asociar una coordenada geográfica a cada registro de datos, siendo este procedimiento de georreferenciación de información de suma importacia en el ámbito urbano.</p>
+<p>Para poderlo llevar a cabo, se requiere contar con un callejero en el que cada dirección, representada por un punto, tenga asociada su ubicación geográfica.</p>
+<p>Disponer de un callejero de referencia es estratégico para la gestión ordinaria de todas las Administraciones Públicas y para la prestación de servicios básicos de distribución, así como para un gran número de actividades comerciales, distribución postal y de paquetería, estudios de geoestadística, análisis espacial y atención de emergencias, entre otros.
+<br /></p>
+<p><br />
+<img alt="Calle de las dichas. Valdealgorfa. Teruel(fuente:personal)" src="../../img/calle_de_las_dichas.jpg" title="Calle de las dichas. Valdealgorfa. Teruel (fuente:personal)" />
+<br />
+<br /></p>
+<p>En España la competencia de la definición de los nomenclátores de calles así como la asignación de la numeración de cada dirección corresponde a los ayuntamientos, quienes tienen la obligación de su actualización y publicación anual, no existiendo un organismo específico que tenga asignada la misión de su recopilación y publicación.</p>
+<p>El <a href="http://www.ign.es/web/ign/portal">Instituto Geográfico Nacional (IGN)</a> edita y gestiona <em>Cartociudad</em>, una base de datos de direcciones de ámbito nacional. Por otra parte distintas administraciones públicas regionales y ayuntamientos también publican callejeros georreferenciados, si bien no existe una regulación técnica para la difusión estandarizada de esta información.</p>
+<p>Se hace necesario por tanto definir una especificación que facilite la recopilación de la información georreferenciada de direcciones desde las distintas fuentes de datos, utilizando formatos sencillos y universales, con objeto de constituir la información de referencia para la prestación de un servicio nacional de geocodificación de direcciones y lugares.</p>
+<p>Contar con una API REST (<a href="https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones">Interfaz de Programación de Aplicaciones</a>) de geocodificación en el marco del <em>Sistema Cartográfico Nacional</em>, ofrece la posibilidad de diseñar servicios cartográficos de consulta, así como la implementación de funciones de geocodificación dentro de las aplicaciones informáticas.</p>
+<p>En los apartados de esta página web se puede consultar el modelo de datos propuesto para la recopilación centralizada de los datos de direcciones y los aspectos técnicos del funcionamiento de la API de geocodificación del Sistema Cartográfico Nacional, junto con algunos ejemplos y utilidades de consulta.
+<br /></p>
+<p>sgt Geocodificación de direcciones SCN
+<br /></p>
+<hr />
+<p>(1) <em>La Comisión Especializada de Normas Geográficas es un órgano de estudio, creado a propuesta de la Comisión Permanente y Pleno del Consejo Superior Geográfico, cuyo objetivo principal, según el <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2007-20556">RD 1545/2007 por el que se regula el Sistema Cartográfico Nacional</a>, es el de elaborar propuestas sobre normas cartográficas que contengan criterios normalizados, a los que deberá ajustarse la cartografía incluida en el Sistema Cartográfico Nacional, con el fin de armonizar los datos geográficos producidos por distintas organizaciones y facilitar el uso de la información geográfica</em>.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Copyright: <a href='https://scne.es'>Sistema Cartográfico Nacional (España)</a></small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "."</script>
+    
+    <script src="js/base.js"></script>
+    <script src="search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
+
+<!--
+MkDocs version : 1.2.2
+Build Date UTC : 2022-04-05 11:47:43.995343+00:00
+-->

@@ -1,0 +1,124 @@
+{
+    "logger": {
+        "level": "info",
+        "timestamp": false
+    },
+    "esclient": {
+        "apiVersion": "7.5",
+        "hosts": [
+            {
+                "host": "my.elasticsearch.es",
+                "port": 9200
+            }
+        ]
+    },
+    "api": {
+        "indexName": "pelias-scne",
+        "services": {
+            "libpostal": {
+                "url": "http://libpostal-ign:4400"
+            },
+            "placeholder": {
+                "url": "http://places-scn:4600"
+            }
+        },
+        "targets": {
+            "auto_discover": false,
+            "layer_aliases": {
+                "coarse": [
+                    "continent",
+                    "empire",
+                    "country",
+                    "dependency",
+                    "macroregion",
+                    "region",
+                    "locality",
+                    "localadmin",
+                    "macrocounty",
+                    "county",
+                    "macrohood",
+                    "borough",
+                    "neighbourhood",
+                    "microhood",
+                    "disputed",
+                    "postalcode",
+                    "continent",
+                    "ocean",
+                    "marinearea"
+                ]
+            },
+            "layers_by_source": {
+                "calrj": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "dgcat": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "dpbcn": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "mun10037": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "mun28079": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "caaymad": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "canav": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "ieca": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "cnig": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "camad": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "ejgv": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "istac": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "mineco": [
+                    "address",
+                    "venue",
+                    "street"
+                ],
+                "cimll": [
+                    "address",
+                    "venue",
+                    "street"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# run tests with pipefail to avoid false passes
+# see https://github.com/pelias/pelias/issues/744
+set -euo pipefail
+
+# Eliminado --trace-uncaught porque da errores
+# PELIAS_CONFIG=./test/test-pelias-config.json node --trace-uncaught test/unit/run.js | npx tap-dot
+PELIAS_CONFIG=./test/test-pelias-config.json node test/unit/run.js | npx tap-dot
