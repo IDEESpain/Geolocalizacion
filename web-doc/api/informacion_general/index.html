@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyecto de geocodificación de direcciones. Comisión Especializada de Normas Geográficas. España">
-    <meta name="author" content="Gonzalo López García">
-    <link rel="canonical" href="https://example.com/api/informacion_general/">
+    <meta name="description" content="Proyecto de geocodificación o geolocalizador de direcciones. Comisión Especializada de Normas Geográficas. España">
+    <meta name="author" content="Sistema Cartográfico Nacional">
+    <link rel="canonical" href="https://ideespain.github.io/geocodificador/api/informacion_general/">
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Información general - Geocodificador SCN</title>
+    <title>Información general - Geolocalizador SCN</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -26,7 +26,7 @@
     
         
         <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        
+        <link href="../../css/custom.css" rel="stylesheet">
     
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,6 +34,103 @@
             <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
         <![endif]-->
+<script type="application/ld+json">
+            {
+              "@context": "https://schema.org/", 
+              "@type": "BreadcrumbList", 
+              "itemListElement": [{
+                "@type": "ListItem", 
+                "position": 1, 
+                "name": "Servicio de geocodificación o geolocalización direcciones del sistema cartográfico nacional (España)",
+                "item": "https://ideespain.github.io/geocodificador/"  
+              },{
+                "@type": "ListItem", 
+                "position": 2, 
+                "name": "Modelo de datos",
+                "item": "https://ideespain.github.io/geocodificador/datos/modelo_de_datos/"  
+              },{
+                "@type": "ListItem", 
+                "position": 3, 
+                "name": "Fuente de datos",
+                "item": "https://ideespain.github.io/geocodificador/datos/fuentes_de_datos/"  
+              },{
+                "@type": "ListItem", 
+                "position": 4, 
+                "name": "Información general",
+                "item": "https://ideespain.github.io/geocodificador/api/informacion_general/"  
+              },{
+                "@type": "ListItem", 
+                "position": 5, 
+                "name": "Geolocalización por identificador geográfico",
+                "item": "https://ideespain.github.io/geocodificador/api/geolocalizacion_por_identificador_geografico/"  
+              },{
+                "@type": "ListItem", 
+                "position": 6, 
+                "name": "Geolocalización por coordenadas geográficas",
+                "item": "https://ideespain.github.io/geocodificador/api/geolocalizacion_por_coordenadas_geograficas/"  
+              },{
+                "@type": "ListItem", 
+                "position": 7, 
+                "name": "Autocompletar",
+                "item": "https://ideespain.github.io/geocodificador/api/autocompletar/"  
+              },{
+                "@type": "ListItem", 
+                "position": 8, 
+                "name": "Geolocalización estructurada",
+                "item": "https://ideespain.github.io/geocodificador/api/geolocalizacion_estructurada/"  
+              },{
+                "@type": "ListItem", 
+                "position": 9, 
+                "name": "Abreviaturas",
+                "item": "https://ideespain.github.io/geocodificador/referencias/abreviaturas/"  
+              },{
+                "@type": "ListItem", 
+                "position": 10, 
+                "name": "Ciudades Autonomas",
+                "item": "https://ideespain.github.io/geocodificador/referencias/ciudades_autonomas/"  
+              },{
+                "@type": "ListItem", 
+                "position": 11, 
+                "name": "Comunidades Autonomas",
+                "item": "https://ideespain.github.io/geocodificador/referencias/comunidades_autonomas/"  
+              },{
+                "@type": "ListItem", 
+                "position": 12, 
+                "name": "Estado del dato",
+                "item": "https://ideespain.github.io/geocodificador/referencias/estados_del_dato/"  
+              },{
+                "@type": "ListItem", 
+                "position": 13, 
+                "name": "Lenguas",
+                "item": "https://ideespain.github.io/geocodificador/referencias/lenguas/"  
+              },{
+                "@type": "ListItem", 
+                "position": 14, 
+                "name": "Municipios",
+                "item": "https://ideespain.github.io/geocodificador/referencias/municipios/"  
+              },{
+                "@type": "ListItem", 
+                "position": 15, 
+                "name": "Poblaciones",
+                "item": "https://ideespain.github.io/geocodificador/referencias/poblaciones/"  
+              },{
+                "@type": "ListItem", 
+                "position": 16, 
+                "name": "Proveedores de datos",
+                "item": "https://ideespain.github.io/geocodificador/referencias/proveedores_de_datos/"  
+              },{
+                "@type": "ListItem", 
+                "position": 17, 
+                "name": "Provincias",
+                "item": "https://ideespain.github.io/geocodificador/referencias/provincias/"  
+              },{
+                "@type": "ListItem", 
+                "position": 18, 
+                "name": "Tipos de dato",
+                "item": "https://ideespain.github.io/geocodificador/referencias/tipos_de_dato/"  
+              }]
+            }
+</script>
 
     
 
@@ -59,7 +156,7 @@
             <!-- Main title -->
 
             
-              <a class="navbar-brand" href="../..">Geocodificador SCN</a>
+              <a class="navbar-brand" href="../..">Geolocalizador SCN</a>
             
         </div>
 
@@ -113,13 +210,13 @@
         
             
 <li >
-    <a href="../geocodificacion_directa/">Geocodificación directa</a>
+    <a href="../geolocalizacion_por_identificador_geografico/">Geolocalización por identificador geográfico</a>
 </li>
 
         
             
 <li >
-    <a href="../geocodificacion_inversa/">Geocodificación inversa</a>
+    <a href="../geolocalizacion_por_coordenadas_geograficas/">Geolocalización por coordenadas geográficas</a>
 </li>
 
         
@@ -131,14 +228,14 @@
         
             
 <li >
-    <a href="../geocodificacion_estructurada/">Geocodificación estructurada</a>
+    <a href="../geolocalizacion_estructurada/">Geolocalización estructurada</a>
 </li>
 
         
             
-<li >
+<!-- <li >
     <a href="../no_disponible/">Lugar</a>
-</li>
+</li> -->
 
         
     </ul>
@@ -146,9 +243,9 @@
 
                         
                             
-<li >
+<!-- <li >
     <a href="../no_disponible/">Formato de la respuesta</a>
-</li>
+</li> -->
 
                         
                         </ul>
@@ -225,9 +322,9 @@
                 
                 
                 
-                    <li >
+<!--                     <li >
                         <a href="../../ejemplos/no_disponible/">Ejemplos</a>
-                    </li>
+                    </li> -->
                 
                 
                 </ul>
@@ -244,7 +341,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../geocodificacion_directa/">
+                        <a rel="next" href="../geolocalizacion_por_identificador_geografico/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
@@ -261,7 +358,7 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#servicio-api-de-geocodificacion-de-direcciones">SERVICIO API DE GEOCODIFICACIÓN DE DIRECCIONES</a></li>
+        <li class="first-level active"><a href="#servicio-api-de-geocodificacion-o-geolocalizacion-de-direcciones"><mayus>Servicio api de geocodificación o geolocacización de direcciones</mayus></a></li>
             <li class="second-level"><a href="#funcionalidad">Funcionalidad</a></li>
                 
             <li class="second-level"><a href="#la-api-de-direcciones-pelias">La API de direcciones Pelias</a></li>
@@ -272,40 +369,40 @@
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="servicio-api-de-geocodificacion-de-direcciones">SERVICIO API DE GEOCODIFICACIÓN DE DIRECCIONES</h2>
-<p><em>(EN EDICIÓN)</em>
+<h2 id="servicio-api-de-geocodificacion-o-geolocalizacion-de-direcciones"><mayus>Servicio api de geocodificación o geolocacización de direcciones</mayus></h2>
+<!-- <p><em>(EN EDICIÓN)</em> -->
 <br /></p>
-<p>El <em>Servicio API de geocodificación de direcciones del Sistema Cartográfico Nacional</em> de España, tiene como objetivo principal buscar y obtener a partir de sus datos identificativos, la localización geográfica de cualquier dirección que se encuentre ubicada dentro del territorio español .</p>
-<p>La URL PROVISIONAL del servicio es: <a href="https://geocoder-5-ign.larioja.org/v1"><strong>https://geocoder-5-ign.larioja.org/v1</strong></a></p>
+<p>El <em>Servicio API de geocodificación o geolocalización direcciones del Sistema Cartográfico Nacional</em> de España, tiene como objetivo principal buscar y obtener a partir de sus datos identificativos, la localización geográfica de cualquier dirección que se encuentre ubicada dentro del territorio español.</p>
+<p>La URL PROVISIONAL del servicio es: <a href="https://geolocalizador.idee.es/v1"><strong>https://geolocalizador.idee.es/v1</strong></a>.</p>
 <p>Además de la geolocalización de una dirección específica, este servicio permite también obtener los datos de las direcciones cercanas a un punto determinado así como aquellas que estén ubicadas dentro de una determinada área geográfica rectangular o circular.</p>
 <p>El servicio utiliza internamente la <a href="https://github.com/pelias/pelias">API Pelias</a> con objeto de ofrecer un conjunto de funciones de consulta flexibles y sofisticadas.</p>
 <p>Los métodos (<em>endpoints</em>) y parámetros que se describen aquí, permiten a cualquier usuario identificar y localizar direcciones con la máxima precisión a partir de los datos completos o parciales que definen una referencia postal, de un identificador (ID) o de un nombre representativo de la misma.</p>
 <p>Las búsquedas interrogan al conjunto de direcciones que se encuentran almacenadas en una base de datos <a href="https://www.elastic.co/es/">ElasticSearch (ELS)</a>, siendo el binomio <em>ElasticSearch-API Pelias</em>, junto con distintos procedimientos desarrollados ad-hoc para este servicio, los elementos que conforman la plataforma tecnológica que provee la funcionalidad.</p>
 <p>Los datos básicos de las direcciones de referencia son recopilados a partir de la información proporcionada por los diferentes productores competentes en materia de direcciones, dentro del marco de cooperación que ofrece el <a href="http://www.scne.es/"><em>Sistema Cartográfico Nacional</em></a> de España.</p>
-<p>Además de direcciones, el servicio de geocodificación está también diseñado para la localización geográfica de topónimos y puntos de interés (POIs).</p>
+<p>Además de direcciones, el servicio de geocodificación o geolocalización está también diseñado para la localización geográfica de topónimos y puntos de interés (POIs).</p>
 <p><br /></p>
-<h3 id="funcionalidad">Funcionalidad</h3>
+<h3 id="funcionalidad">Funcionalidad.</h3>
 <p><br /></p>
 <p>El servicio permite interrogar la API con el fin de:</p>
 <ul>
 <li>Obtener los datos y la ubicación precisa de una dirección.  </li>
-<li>Localizar la dirección más próxima a un punto determinado (geocodificación inversa).  </li>
+<li>Localizar la dirección más próxima a un punto determinado (geolocalización por coordenadas geográficas).  </li>
 <li>Localizar las direcciones que se encuentran dentro de un área geográfica rectangular o circular.  </li>
 </ul>
 <p>pudiendo limitar el ámbito de búsqueda a los datos ofrecidos por uno o varios suministradores.  </p>
 <p><br /></p>
-<h3 id="la-api-de-direcciones-pelias">La API de direcciones Pelias</h3>
+<h3 id="la-api-de-direcciones-pelias">La API de direcciones Pelias.</h3>
 <p><br /></p>
 <p>La <em>API Pelias</em> utilizada subyacentemente en este servicio, es una API RESTful que devuelve el resultado de las consultas realizadas en <a href="https://es.wikipedia.org/wiki/JSON">formato JSON</a> conforme a los métodos y parámetros definidos en este documento.</p>
 <p><br /></p>
-<h3 id="metodos">Métodos</h3>
+<h3 id="metodos">Métodos.</h3>
 <p><br /></p>
 <p>Los métodos y <em>endpoints</em> que se pueden utilizar son los siguientes:</p>
 <ul>
-<li><a href="../../api/geocodificacion_directa/"><strong>Geocodificación directa</strong></a> <small>(/v1/search)</small>: Método que obtiene los datos y la ubicación de una dirección o lugar, a partir de sus datos identificativos o de referencia.  </li>
-<li><a href="../../api/geocodificacion_inversa/"><strong>Geocodificación inversa</strong></a> <small>(/v1/reverse)</small>: Método que busca las direcciones más próximas a un punto geográfico determinado.  </li>
+<li><a href="../../api/geolocalizacion_por_identificador_geografico/"><strong>Geolocalización por identificador geográfico</strong></a> <small>(/v1/search)</small>: Método que obtiene los datos y la ubicación de una dirección o lugar, a partir de sus datos identificativos o de referencia.  </li>
+<li><a href="../../api/geolocalizacion_por_coordenadas_geograficas/"><strong>Geolocalización por coordenadas geográficas</strong></a> <small>(/v1/reverse)</small>: Método que busca las direcciones más próximas a un punto geográfico determinado.  </li>
 <li><a href="../../api/autocompletar/"><strong>Autocompletar</strong> </a>(<small>(/v1/autocomplete)</small>: Método que obtiene resultados en tiempo real sin necesidad de completar todos los datos de identificación.  </li>
-<li><strong>Geocodificación estructurada</strong> <small>(/v1/search/structured)</small>: (beta) Método que encuentra un lugar a partir de datos estructurados en calle, número, ciudad, etc.  </li>
+<li><strong>Geolocalización estructurada</strong> <small>(/v1/search/structured)</small>: (beta) Método que encuentra un lugar a partir de datos estructurados en calle, número, ciudad, etc.  </li>
 <li><strong>Lugar</strong> <small>(/v1/place)</small>: Método que obtiene detalles sobre un lugar devuelto por una consulta anterior.<br />
 <br /></li>
 </ul>
@@ -327,6 +424,30 @@
             
             <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
             </p>
+          <div hidden>
+            <div id="hcard-Sistema-Cartográfico-Nacional" class="vcard">
+              <img style="float:left; margin-right:4px" src="https://www.scne.es/images/logoSCN.png" alt="photo of Sistema Cartográfico Nacional" class="photo"/>
+             <a class="url fn n" href="https://www.scne.es/">  <span class="given-name">Sistema Cartográfico Nacional</span>
+              <span class="additional-name"></span>
+              <span class="family-name"></span>
+            </a>
+             <div class="org"> Dirección General del Instituto Geográfico Nacional</div>
+             <a class="email" href="mailto:ign@transportes.gob.es">ign@transportes.gob.es</a>
+             <div class="adr">
+              <div class="street-address"> Calle General Ibáñez de Ibero, 3</div>
+              <span class="locality">Madrid</span>
+            , 
+              <span class="region">Madrid</span>
+            , 
+              <span class="postal-code">28003</span>
+            
+              <span class="country-name">España</span>
+            
+             </div>
+             <div class="tel">+34 91 597 94 22</div>
+            <div><span class="category">geocodificación</span>, <span class="category">geolocalizador de direcciones</span>, <span class="category">Geolocalizador SCN</span>, <span class="category">Geolocalización por identificador geográfico</span>, <span class="category">Geolocalización por coordenadas geográficas</span>, <span class="category">Geolocalización estructurada</span>, <span class="category">Comisión Especializada de Normas Geográficas</span>, <span class="category">Consejo Superior Geográfico</span></div><p style="font-size:smaller;"></p>
+            </div>
+          </div>
           
 
           
