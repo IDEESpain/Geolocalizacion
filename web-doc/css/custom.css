@@ -1,0 +1,9 @@
+mayus {
+    text-transform: uppercase;
+}
+h2{
+    font-weight: bold;
+}
+ul.nav li.fourth-level {
+    padding-left: 24px;
+}
