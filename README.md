@@ -1,4 +1,8 @@
-# Servicio REST de Geocodificación de direcciones del Sistema Cartográfico Nacional de España (SCNE)
+# Servicio REST de Geocodificación o Geolocalización de direcciones postales del Sistema Cartográfico Nacional de España (SCNE)
+
+## Información sobre el proyecto
+
+Se tiene toda la información sobre el modelo de datos, servicio y [visualizador](https://visualizadores.idee.es/geocodificador-scn/) del Geocoder del Sistema Cartográfico Nacional de España en: https://ideespain.github.io/Geolocalizacion/
 
 ## Basado en Pelias
 
