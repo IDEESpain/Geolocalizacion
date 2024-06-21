@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Proyecto de geocodificación o geolocalizador de direcciones. Comisión Especializada de Normas Geográficas. España">
     <meta name="author" content="Sistema Cartográfico Nacional">
-    <link rel="canonical" href="https://ideespain.github.io/geocodificador/visualizador/">
+    <link rel="canonical" href="https://ideespain.github.io/geocodificador/resumen_del_proyecto">
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>Visualizador - Geolocalizador SCN</title>
+    <title>Resumen del Proyecto - Geolocalizador SCN</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -19,14 +19,14 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="../css/base.min.css" rel="stylesheet">
-    <link href="../css/cinder.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
 
     
         
         <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
-        <link href="../css/custom.css" rel="stylesheet">
+        <link href="../../css/custom.css" rel="stylesheet">
     
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -331,27 +331,24 @@
                         <a href="../../ejemplos/no_disponible/">Ejemplos</a>
                     </li> -->
                 
-                    <li class="active">
-                        <a href="../visualizador/">Visualizador</a>
+                    <li>
+                        <a href="../../visualizador/">Visualizador</a>
                     </li>
 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">Proyecto <b class="caret"></b></a>
                       <ul class="dropdown-menu">
 
 
                     <li>
-                        <a href="../../proyecto/resumen_del_proyecto/">Resumen del Proyecto</a>
+                        <a href="../resumen_del_proyecto/">Resumen del Proyecto</a>
                     </li>
                     <li>
-                      <a href="../../proyecto/colabora/">Colabora</a>
+                      <a href="../colabora/">Colabora</a>
                     </li>
 
                     </ul>
                     </li>
-                
-
-
             <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
@@ -359,16 +356,15 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../../referencias/tipos_de_dato/">
+                        <a rel="prev" href="../../visualizador/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li>
-                        <a rel="next" href="../../proyecto/resumen_del_proyecto/">
+                        <a rel="next" href="../colabora/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
-                   
                     <li>
                         <a href="https://github.com/IDEESpain/Geolocalizacion/edit/master/docs/referencias/tipos_de_dato.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
@@ -382,49 +378,38 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#visualizador"><mayus>Visualizador</mayus></a></li>
+        <li class="first-level active"><a href="#resumen_del_proyecto"><mayus>Geocodificación o geolocalización de direcciones</mayus></a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
         
-          <h2 id="visualizador">Visualizador</h2>
-          <br>
-          <p>Para poder mostrar las posibilidades del servicio se ha desarrollado un visualizador titulado <a
-            href="https://visualizadores.idee.es/geocodificador-scn/"><em>«Buscador de direcciones postales»</em></a>.</p>
-
-           <br>
-
-          <a href="https://visualizadores.idee.es/geocodificador-scn/"><p><img alt="Visualizador web" src="../img/visualizador_home.jpg" title="Captura visualizador web" /></p></a>
-
-          <br>
-            <br>
-            <p> El visualizador está desarrollado con la <a href="https://plataforma.idee.es/web/idee/cnig-api"><em>API-CNIG</em></a>, un desarrollo abierto para la creación de visualizadores cartográficos. Esta API cuenta con una API REST y una API <em>javascript</em>, muy sencillas de utilizar. Puede encontrar más información en el repositorio de <a href="https://github.com/IGN-CNIG/API-CNIG"><em>GitHub</em></a>.</p>
-            <a href="https://plataforma.idee.es/web/idee/cnig-api"><p class="text-center"><img alt="Imagen logo API-CNIG" src="../img/api_cnig.jpg" title="Imagen logo API-CNIG" /></p></a>
-            <p>En dicho visualizador se encuentra un apartado informativo, mostrando la leyenda de los campos obtenidos de las búsquedas realizadas, así como un <a href="https://visualizadores.idee.es/geocodificador-scn/Manual_Visualizador_Geocodificador-scn.pdf"><em>manual del visualizador</em></a>.</p>
-            <p>Además, ha sido necesario la creación de un nuevo <em>plugin</em> en la API-CNIG para poder incorporar el servicio Geolocalización del SCN, el cual se denomina <a href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/locatorscn"><em>«locatorscn»</em></a>. </p>
-            <p>Con el <em>plugin</em> se tiene la posibilidad de poder adaptar las búsquedas del servicio según las necesidades pertinentes y tiene la siguiente apariencia:</p> 
-            <br>
-            <p class="text-center"><img alt="Imagen localizador" src="../img/localizador.jpg" title="Imagen localizador" /></p>
-            <br>
-            <p>Entre otras funcionalidades, se puede hacer con los siguientes parámetros, lo siguiente:</p>
-            <ul>
-            <li><a href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/locatorscn"><em>sources:</em></a> seleccionar el proveedor o proveedores de datos de la búsqueda realizada.</li>
-            <li><a href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/locatorscn"><em>size:</em></a> cambiar el número de resultados máximos para la búsqueda por texto.</li>
-            <li><a href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/locatorscn"><em>radius:</em></a> definir el radio de búsqueda a partir del método de geolocalización por coordenadas.</li>
-            </ul>
-            <br>
-            <div class="bs-callout bs-callout-info">
-              <small>
-              <h4><small>Notas:</small></h4>
-              En este visualizador se ha implementado el servicio de Geolocalización del SCN sin ningún tipo de filtro respectivo con el proveedor de datos, por ello se muestran todas las direcciones almacenadas en Elasticsearch.
-              <br>
-              <br>
-              Si se quisiese hacer un visualizador solo con las direcciones de un proveedor o proveedores específicos, a partir de la API-CNIG se puede parametrizar con el parámetro <a href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/locatorscn"><em>sources</em></a> del plugin <a href="https://github.com/IGN-CNIG/API-CNIG/tree/master/api-ign-js/src/plugins/locatorscn"><em>«locatorscn»</em></a>.
-              </small>
+          <h2 id="resumen_del_proyecto">Geocodificación o geolocalización de direcciones</h2>
+          <p><br />
+          <img alt="Placa del Paseo de la Dirección (fuente:Wikimedia)" src="../../img/placa_del_paseo_de_la_direccion.jpg" title="Placa del Paseo de la Dirección (fuente:Wikimedia)" />
+          <br />
+          <br /></p>
+          <p>La geocodificación o geolocalización es el proceso que permite obtener la ubicación de un lugar a partir del dato de su dirección, de su nombre, o de un identificador.</p>
+          <p>Este proceso de geocodificación, aplicado a un archivo que incluya información de direcciones, permite asociar una coordenada geográfica a cada registro de datos, siendo este procedimiento de georreferenciación de información de suma importacia en el ámbito urbano.</p>
+          <p>Para poderlo llevar a cabo, se requiere contar con un callejero en el que cada dirección, representada por un punto, tenga asociada su ubicación geográfica.</p>
+          <p>Disponer de un callejero de referencia es estratégico para la gestión ordinaria de todas las Administraciones Públicas y para la prestación de servicios básicos de distribución, así como para un gran número de actividades comerciales, distribución postal y de paquetería, estudios de geoestadística, análisis espacial y atención de emergencias, entre otros.
+          <br /></p>
+          <p><br />
+          <img alt="Calle de las dichas. Valdealgorfa. Teruel(fuente:personal)" src="../../img/calle_de_las_dichas.jpg" title="Calle de las dichas. Valdealgorfa. Teruel (fuente:personal)" />
+          <br />
+          <br /></p>
+          <p>En España la competencia de la definición de los nomenclátores de calles así como la asignación de la numeración de cada dirección corresponde a los ayuntamientos, quienes tienen la obligación de su actualización y publicación anual, no existiendo un organismo específico que tenga asignada la misión de su recopilación y publicación.</p>
+          <p>El <a href="https://www.ign.es/web/ign/portal">Instituto Geográfico Nacional (IGN)</a> edita y gestiona <em>Cartociudad</em>, una base de datos de direcciones de ámbito nacional. Por otra parte distintas administraciones públicas regionales y ayuntamientos también publican callejeros georreferenciados, si bien no existe una regulación técnica para la difusión estandarizada de esta información.</p>
+          <p>Se hace necesario por tanto definir una especificación que facilite la recopilación de la información georreferenciada de direcciones desde las distintas fuentes de datos, utilizando formatos sencillos y universales, con objeto de constituir la información de referencia para la prestación de un servicio nacional de geocodificación o geolocalización direcciones y lugares.</p>
+          <p>Contar con una API REST (<a href="https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones">Interfaz de Programación de Aplicaciones</a>) de geocodificación en el marco del <em>Sistema Cartográfico Nacional</em>, ofrece la posibilidad de diseñar servicios cartográficos de consulta, así como la implementación de funciones de geocodificación dentro de las aplicaciones informáticas.</p>
+          <p>En los apartados de esta página web se puede consultar el modelo de datos propuesto para la recopilación centralizada de los datos de direcciones y los aspectos técnicos del funcionamiento de la API de geocodificación del Sistema Cartográfico Nacional, junto con algunos ejemplos y utilidades de consulta.
+          <br /></p>
+          
+          <hr />
+          <p>(1) <em>La Comisión Especializada de Normas Geográficas es un órgano de estudio, creado a propuesta de la Comisión Permanente y Pleno del Consejo Superior Geográfico, cuyo objetivo principal, según el <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2007-20556">RD 1545/2007 por el que se regula el Sistema Cartográfico Nacional</a>, es el de elaborar propuestas sobre normas cartográficas que contengan criterios normalizados, a los que deberá ajustarse la cartografía incluida en el Sistema Cartográfico Nacional, con el fin de armonizar los datos geográficos producidos por distintas organizaciones y facilitar el uso de la información geográfica</em>.</p></div>
+                  
+                  
               </div>
-            
-          </div>
           
               
                 <footer class="col-md-12 text-center">
@@ -475,8 +460,8 @@
 
     <script>var base_url = "../.."</script>
     
-    <script src="../js/base.js"></script>
-    <script src="../search/main.js"></script>
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
