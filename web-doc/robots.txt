@@ -36,4 +36,4 @@ Disallow: /cgi-bin/
 Disallow: /ejemplos/
 Disallow: /datos/no_disponible/
 Disallow: /api/no_disponible/
-Sitemap: https://ideespain.github.io/geocodificador/sitemap.xml
+Sitemap: https://ideespain.github.io/Geolocalizacion/sitemap.xml
