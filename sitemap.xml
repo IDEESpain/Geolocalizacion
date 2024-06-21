@@ -1,112 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ideespain.github.io/geocodificador/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/api/autocompletar/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/api/autocompletar/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/api/geolocalizacion_por_identificador_geografico/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/api/geolocalizacion_por_identificador_geografico/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/api/geolocalizacion_estructurada/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/api/geolocalizacion_estructurada/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/api/geolocalizacion_por_coordenadas_geograficas/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/api/geolocalizacion_por_coordenadas_geograficas/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/api/informacion_general/</loc>
-         <lastmod>2024-06-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-<!--     <url>
-         <loc>https://ideespain.github.io/geocodificador/api/no_disponible/</loc>
-         <lastmod>2024-06-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url> -->
-    <url>
-         <loc>https://ideespain.github.io/geocodificador/datos/fuentes_de_datos/</loc>
-         <lastmod>2024-06-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ideespain.github.io/geocodificador/datos/modelo_de_datos/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/api/informacion_general/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 <!--     <url>
-         <loc>https://ideespain.github.io/geocodificador/datos/no_disponible/</loc>
-         <lastmod>2024-06-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ideespain.github.io/geocodificador/ejemplos/no_disponible/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/api/no_disponible/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url> -->
     <url>
-         <loc>https://ideespain.github.io/geocodificador/referencias/abreviaturas/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/datos/fuentes_de_datos/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/referencias/ciudades_autonomas/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/datos/modelo_de_datos/</loc>
+         <lastmod>2024-06-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+<!--     <url>
+         <loc>https://ideespain.github.io/Geolocalizacion/datos/no_disponible/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/referencias/comunidades_autonomas/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/ejemplos/no_disponible/</loc>
+         <lastmod>2024-06-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url> -->
+    <url>
+         <loc>https://ideespain.github.io/Geolocalizacion/referencias/abreviaturas/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/referencias/estados_del_dato/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/referencias/ciudades_autonomas/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/referencias/lenguas/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/referencias/comunidades_autonomas/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/referencias/proveedores_de_datos/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/referencias/estados_del_dato/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/referencias/provincias/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/referencias/lenguas/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/referencias/tipos_de_dato/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/referencias/proveedores_de_datos/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/visualizador/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/referencias/provincias/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/proyecto/resumen_del_proyecto/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/referencias/tipos_de_dato/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ideespain.github.io/geocodificador/proyecto/colabora/</loc>
+         <loc>https://ideespain.github.io/Geolocalizacion/visualizador/</loc>
+         <lastmod>2024-06-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ideespain.github.io/Geolocalizacion/proyecto/resumen_del_proyecto/</loc>
+         <lastmod>2024-06-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ideespain.github.io/Geolocalizacion/proyecto/colabora/</loc>
          <lastmod>2024-06-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
