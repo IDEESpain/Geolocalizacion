@@ -1,6 +1,13 @@
 # Servicio REST de Geocodificación o Geolocalización de direcciones postales del Sistema Cartográfico Nacional de España (SCNE)
 
-## Basado en Pelias
+## ✍️ Información del proyecto
+
+Enlace de la web oficial del proyecto: https://ideespain.github.io/Geolocalizacion/
+
+![image](https://github.com/IDEESpain/Geolocalizacion/assets/66720036/5284060d-0003-44f8-9949-9959d0f9f3b1)
+
+
+## 🚂 Basado en Pelias
 
 El Geocodificador del SCNE está basado en Pelias, que es un geocodificador de direcciones de código abierto:
 - [Web oficial](https://pelias.io/)
@@ -8,7 +15,7 @@ El Geocodificador del SCNE está basado en Pelias, que es un geocodificador de d
 
 La versión de Pelias sobre la que se basa este proyecto es la [v5.43.0](https://github.com/pelias/api/releases/tag/v5.43.0).
 
-## Servicios principales
+## 🌟 Servicios principales
 
 Los servicios que principalmente se usan en este proyecto son:
 - [/v1/autocomplete](https://github.com/pelias/documentation/blob/master/autocomplete.md) - Permite realizar búsqueda de direcciones en tiempo real introduciendo texto.
@@ -16,7 +23,7 @@ Los servicios que principalmente se usan en este proyecto son:
 
 Más información acerca de los servicios de Pelias, [aquí](https://github.com/pelias/documentation/blob/master/services.md)
 
-## Requisitos técnicos
+## 🔧 Requisitos técnicos
 
 - [Docker Compose](https://docs.docker.com/compose/) en su última versión
 - [Acceso a DockerHub](https://hub.docker.com/)
@@ -63,7 +70,7 @@ Se tienen dos ficheros de ejecución sh para ayudar a crear los índices _places
 - Se crean los índices vacíos
 - Ver el README correspondiente para más información
 
-## Configuración
+## 🛠 Configuración
 
 1º) pelias.json
 
@@ -90,7 +97,7 @@ const els_node = 'http://my.elasticsearch.es:9200';
 …
 ```
 
-## Despliegue
+## 🚀 Despliegue
 
 Desde la carpeta donde se encuentre el fichero docker-compose.yml:
 - Arranque
@@ -106,6 +113,6 @@ Son 3 los contenedores los que deben estar UP:
 - pelias_api-7-ign
 - places_scn
 
-## Acceso / Testing
+## 📊 Acceso / Testing
 
-Una vez desplegados los servicios vía Docker Compose, se tiene un visor embebido (basado en [API CNIG](https://plataforma.idee.es/cnig-api)) que se encuentra en la URL /v1/map para chequear el acceso y realizar testing funcional sobre los datos.
+Una vez desplegados los servicios vía Docker Compose, se tiene un visor embebido (basado en [API CNIG](https://plataforma.idee.es/cnig-api)) que se encuentra en la URL: https://geolocalizador.idee.es/v1/map para chequear el acceso y realizar testing funcional sobre los datos.
