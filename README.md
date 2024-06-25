@@ -115,4 +115,4 @@ Son 3 los contenedores los que deben estar UP:
 
 ## 📊 Acceso / Testing
 
-Una vez desplegados los servicios vía Docker Compose, se tiene un visor embebido (basado en [API CNIG](https://plataforma.idee.es/cnig-api)) que se encuentra en la URL: https://geolocalizador.idee.es/v1/map para chequear el acceso y realizar testing funcional sobre los datos.
+Una vez desplegados los servicios vía Docker Compose, se tiene un visor embebido (basado en [API CNIG](https://plataforma.idee.es/cnig-api)) que se encuentra en la URL/v1/map para chequear el acceso y realizar testing funcional sobre los datos.
