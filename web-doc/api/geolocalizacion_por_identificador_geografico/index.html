@@ -624,19 +624,19 @@ PLAZA MAYOR (CARTUJA), Cartuja Baja, Zaragoza, España (-0.821923,41.604933)  </
 </tr>
 </tbody>
 </table>
-<p>Por ejemplo, para encontrar una dirección que contenga el texto "<em>mayor</em>" en un área circular de 10 km desde Frómista (Palencia), con coordenadas de referencia (lat,lon) 42.268,-4.405.</p>
+<p>Por ejemplo, para encontrar una dirección que contenga el texto "<em>mayor 5</em>" en un área circular de 5 km desde Frómista (Palencia), con coordenadas de referencia (lat,lon) 42.268,-4.405.</p>
 <p><br />
 <img alt="Círculo 10 km desde Frómista (fuente: propia)" src="../../img/fromista_circulo_10km.jpg" title="Círculo 10 km desde Frómista (fuente: propia)" />
 <br />
 <br /></p>
 <p>La sintaxis a utilizar es:</p>
-<p><a href="https://geolocalizador.idee.es/v1/search?text=mayor&amp;boundary.circle.lat=42.268&amp;boundary.circle.lon=-4.405&amp;boundary.circle.radius=10">https://geolocalizador.idee.es/v1/search?text=mayor&amp;boundary.circle.lat=42.268&amp;boundary.circle.lon=-4.405&amp;boundary.circle.radius=10</a>.</p>
+<p><a href="https://geolocalizador.idee.es/v1/search?text=mayor%205&boundary.circle.lat=42.268&boundary.circle.lon=-4.405&boundary.circle.radius=5">https://geolocalizador.idee.es/v1/search?text=mayor%205&boundary.circle.lat=42.268&boundary.circle.lon=-4.405&boundary.circle.radius=5</a>.</p>
 <p>Que arroja el siguiente resultado:</p>
 <blockquote>
-<p>CALLE MAYOR, Marcilla de Campos, Palencia, España (4.397729,42.317378)<br />
-PLAZA MAYOR, Santoyo, Palencia, España (-4.34285,42.214136)<br />
-TRAVESIA MAYOR, Boadilla del Camino, Palencia, España (-4.347739,42.259541)<br />
-TRVA MAYOR, BOADILLA DEL CAMINO, Palencia, España (-4.34823,42.259339)  </p>
+<p>TRAVESIA MAYOR 5, Boadilla del Camino, Palencia, España (-4.3482891272414, 42.2591226393984)<br />
+CALLE MAYOR 5, Boadilla del Camino, Palencia, España (-4.347828978610584, 42.2597777397828)<br />
+PLAZA MAYOR 5, Boadilla del Camino, Palencia, España (-4.346701742940012, 42.25907373971483)<br />
+CALLE MAYOR 5, Población de Campos, Palencia, España (-4.448472964526657, 42.26988751437684)</p>
 </blockquote>
 <p><br /></p>
 <h4 id="busqueda-aplicando-jerarquia-administrativa">Búsqueda aplicando jerarquía administrativa</h4>
@@ -941,7 +941,7 @@ Búsqueda del punto de interés <em>Cortijo Majón</em>:
 <td>no</td>
 <td>todas las capas</td>
 <td>Nombres de las capas de datos a las que se dirije la consulta, separados por comas</td>
-<td>venue, street</td>
+<td>venue, address</td>
 </tr>
 <tr>
 <td><strong><code>size</code></strong></td>
