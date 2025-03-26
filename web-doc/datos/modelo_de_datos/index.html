@@ -263,9 +263,9 @@
                         <ul class="dropdown-menu">
                         
                             
-<li >
+<!-- <li >
     <a href="../../referencias/abreviaturas/">Abreviaturas</a>
-</li>
+</li> -->
 
                         
                             
@@ -383,31 +383,33 @@
             <li class="second-level"><a href="#1-objetivos">1. Objetivos</a></li>
                 
             <li class="second-level"><a href="#2-introduccion">2. Introducción</a></li>
-                
-            <li class="second-level"><a href="#3-modelo-de-datos">3. Modelo de datos</a></li>
-                
-            <li class="third-level"><a href="#31-identificador">3.1 Identificador</a></li>
-            <li class="third-level"><a href="#32-tipo-de-via">3.2 Tipo de vía</a></li>
-            <li class="third-level"><a href="#33-nombre-de-la-via">3.3 Nombre de la vía</a></li>
-            <li class="third-level"><a href="#34-numero-de-la-finca-portal-o-punto-kilometrico">3.4 Número de la finca, portal o punto kilométrico</a></li>
-            <li class="third-level"><a href="#35-nombre-de-la-localizacion">3.5 Nombre de la localización</a></li>
-            <li class="third-level"><a href="#36-codigo-postal">3.6 Código postal</a></li>
-            <li class="third-level"><a href="#37-unidades-administrativas">3.7 Unidades Administrativas</a></li>
-            <li class="fourth-level"><a href="#371-comunidadciudad-autonoma">3.7.1 Comunidad/Ciudad Autónoma</a></li>
-            <li class="fourth-level"><a href="#372-provincia">3.7.2 Provincia</a></li>
-            <li class="fourth-level"><a href="#373-municipio">3.7.3. Municipio</a></li>
-            <li class="fourth-level"><a href="#374-primer-nivel">3.7.4 Primer nivel</a></li>
-            <li class="fourth-level"><a href="#375-segundo-nivel">3.7.5 Segundo nivel</a></li>
-            <li class="third-level"><a href="#38-codigo-ine-de-tramo">3.8 Código INE de tramo</a></li>
-            <li class="third-level"><a href="#39-lengua">3.9 Lengua</a></li>
-            <li class="third-level"><a href="#310-tipo-de-dato">3.10 Tipo de dato</a></li>
-            <li class="third-level"><a href="#311-estado">3.11 Estado</a></li>
-            <li class="third-level"><a href="#312-proveedor">3.12 Proveedor</a></li>
-            <li class="third-level"><a href="#313-geometria">3.13 Geometría</a></li>
-            <li class="fourth-level"><a href="#3131-latitud">3.13.1 Latitud</a></li>
-            <li class="fourth-level"><a href="#3132-longitud">3.13.2 Longitud</a></li>
+            
+            <li class="second-level"><a href="#3-formato-del-fichero">3. Formato del fichero</a></li>
 
-            <li class="second-level"><a href="#4-formato-del-fichero">4. Formato del fichero</a></li>
+            <li class="second-level"><a href="#4-modelo-de-datos">4. Modelo de datos</a></li>
+                
+            <li class="third-level"><a href="#41-identificador">4.1 Identificador</a></li>
+            <li class="third-level"><a href="#42-tipo-de-via">4.2 Tipo de vía</a></li>
+            <li class="third-level"><a href="#43-nombre-de-la-via">4.3 Nombre de la vía</a></li>
+            <li class="third-level"><a href="#44-numero-de-la-finca-portal-o-punto-kilometrico">4.4 Número de la finca, portal o punto kilométrico</a></li>
+            <li class="third-level"><a href="#45-nombre-de-la-localizacion">4.5 Nombre de la localización</a></li>
+            <li class="third-level"><a href="#46-codigo-postal">4.6 Código postal</a></li>
+            <li class="third-level"><a href="#47-unidades-administrativas">4.7 Unidades Administrativas</a></li>
+            <li class="fourth-level"><a href="#471-comunidadciudad-autonoma">4.7.1 Comunidad/Ciudad Autónoma</a></li>
+            <li class="fourth-level"><a href="#472-provincia">4.7.2 Provincia</a></li>
+            <li class="fourth-level"><a href="#473-municipio">4.7.3. Municipio</a></li>
+            <li class="fourth-level"><a href="#474-primer-nivel">4.7.4 Primer nivel</a></li>
+            <li class="fourth-level"><a href="#475-segundo-nivel">4.7.5 Segundo nivel</a></li>
+            <li class="third-level"><a href="#48-codigo-ine-de-tramo">4.8 Código INE de tramo</a></li>
+            <li class="third-level"><a href="#49-lengua">4.9 Lengua</a></li>
+            <li class="third-level"><a href="#410-tipo-de-dato">4.10 Tipo de dato</a></li>
+            <li class="third-level"><a href="#411-estado">4.11 Estado</a></li>
+            <li class="third-level"><a href="#412-proveedor">4.12 Proveedor</a></li>
+            <li class="third-level"><a href="#413-geometria">4.13 Geometría</a></li>
+            <li class="fourth-level"><a href="#4131-latitud">4.13.1 Latitud</a></li>
+            <li class="fourth-level"><a href="#4132-longitud">4.13.2 Longitud</a></li>
+
+            
                 
     </ul>
 </div></div>
@@ -446,14 +448,24 @@
           <p><br></p>
           <p>En España la competencia administrativa para definir el nombre oficial del viario y la numeración de las direcciones corresponde a los ayuntamientos.</p>
           <p>Por este motivo, para constituir una base de datos de direcciones, es necesaro definir un procedimiento de recopilación de información muy básico en el que pueda participar cualquier administración local independientemente de su tamaño y capacidad técnica o económica.</p>
-          <p>Para ello se ha establecido que el formato de fichero de datos a utilizar para la recolección de direcciones sea conforme con el estándar CSV (<em>Comma-Separated Values</em>) <a href="https://datatracker.ietf.org/doc/html/rfc4180">[RFC 4180]</a>, dada su naturaleza de texto plano, la sencillez de su estructura interna y la posibidad de generarlo con cualquier tipo de software.</p>
           <p>A diferencia de otros modelos de datos de direcciones, la estructura y tipología de sus atributos se ha orientado para atender las funcionalidades genéricas de un servicio de geocodificación o geolocalización.</p>
           <p>Por este motivo se ha incluido un atributo que codifique el estado del dato, con objeto de diferenciar las direcciones entre: oficiales; normalizadas; históricas y otras, así como otro atributo que permita asignar un nombre propio a una dirección o localización, con objeto de facilitar su descubrimiento cuando no se dispone de un dato preciso de dirección, siendo aplicable también a la búsqueda de toponimia y puntos de interés.</p>
           <p>Es necesario recalcar que este modelo de datos no está dirigido a la formación de una base de datos de direcciones al uso, sino a la indexación de información con el objetivo de dar soporte a un servicio de geocodificación o geolocalización.</p>
           <p><br></p>
-          <h3 id="3-modelo-de-datos">3. Modelo de datos.</h3>
+          <h3 id="3-formato-del-fichero">3. Formato del fichero.</h3>
           <p><br></p>
-          <h4 id="31-identificador">3.1 Identificador.</h4>
+          <p>El formato de fichero de intercambio de datos debe ser conforme con el estándar CSV (<em>Comma-Separated Values</em>) <a href="https://datatracker.ietf.org/doc/html/rfc4180">[RFC 4180]</a>, utilizando como separador de los atributos el carácter <em>punto y coma</em> (;). Tiene que tener la siguiente configuración:</p>
+          <ul>
+          <li>Cada registro (dirección, topónimo, punto de interés) se define mediante una línea adicional en el fichero.</li>
+          <li>Los datos de latitud y longitud deben indicarse con al menos cinco (5) cifras decimales de precisión geográfica.</li>
+          <li>Codificación de caracteres: <a href="https://es.wikipedia.org/wiki/UTF-8">UTF-8 sin BOM</a>.</li>
+          </ul>
+          <br>
+          <p>Se tiene <strong><a href="../fuentes_de_datos/ejemplo.csv">aquí</a></strong>, un fichero CSV con la cabecera ya creada.</p>
+          <p><br></p>
+          <h3 id="4-modelo-de-datos">4. Modelo de datos.</h3>
+          <p><br></p>
+          <h4 id="41-identificador">4.1 Identificador.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -546,7 +558,7 @@
           </small>
           </div>
           <p><br></p>
-          <h4 id="32-tipo-de-via">3.2 Tipo de vía.</h4>
+          <h4 id="42-tipo-de-via">4.2 Tipo de vía.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -625,7 +637,7 @@
           </small>
           </div>
           <p><br></p>
-          <h4 id="33-nombre-de-la-via">3.3 Nombre de la vía.</h4>
+          <h4 id="43-nombre-de-la-via">4.3 Nombre de la vía.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -671,7 +683,7 @@
           </small>
           </div>
           <p><br></p>
-          <h4 id="34-numero-de-la-finca-portal-o-punto-kilometrico">3.4 Número de la finca, portal o punto kilométrico.</h4>
+          <h4 id="44-numero-de-la-finca-portal-o-punto-kilometrico">4.4 Número de la finca, portal o punto kilométrico.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -728,7 +740,7 @@
            </small>
           </div>
           <p><br></p>
-          <h4 id="35-nombre-de-la-localizacion">3.5 Nombre de la localización.</h4>
+          <h4 id="45-nombre-de-la-localizacion">4.5 Nombre de la localización.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -769,7 +781,7 @@
           </small>
           </div>
           <p><br></p>
-          <h4 id="36-codigo-postal">3.6 Código postal.</h4>
+          <h4 id="46-codigo-postal">4.6 Código postal.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -804,11 +816,11 @@
           <p>Su uso es obligatorio cuando el registro de datos corresponde a una dirección (<a href="../../datos/modelo_de_datos/#310-tipo-de-dato"><code>TIPDATO</code></a>=<em>Dirección</em>), no siendo necesario en los registros cuyo tipo de dato (<a href="../../datos/modelo_de_datos/#310-tipo-de-dato"><code>TIPDATO</code></a>) sea <em>Topónimo</em> o <em>POI</em>.</p>
           <p>No incluir separador de millares.</p>
           <p><br></p>
-          <h4 id="37-unidades-administrativas">3.7 Unidades Administrativas</h4>
+          <h4 id="47-unidades-administrativas">4.7 Unidades Administrativas</h4>
           <p><br></p>
           <p>Los siguientes atributos estructuran por orden de rango las unidades administrativas a las que se asocia una dirección, topónimo o POI.</p>
           <p><br></p>
-          <h4 id="371-comunidadciudad-autonoma">3.7.1 Comunidad/Ciudad Autónoma.</h4>
+          <h4 id="471-comunidadciudad-autonoma">4.7.1 Comunidad/Ciudad Autónoma.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -842,7 +854,7 @@
           </table>
           <p>Los textos de los nombres de la comunidad o ciudad autónoma deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas.</p>
           <p><br></p>
-          <h4 id="372-provincia">3.7.2 Provincia.</h4>
+          <h4 id="472-provincia">4.7.2 Provincia.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -876,7 +888,7 @@
           </table>
           <p>Los textos de los nombres de provincia deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas.</p>
           <p><br></p>
-          <h4 id="373-municipio">3.7.3. Municipio.</h4>
+          <h4 id="473-municipio">4.7.3. Municipio.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -916,7 +928,7 @@
             <p>En el caso que las direcciones postales o topónimos no estén asignadas a un municipio el Centro Nacional de Información Geográfica, se lo asignará.</p></small>
             </div>
           <p><br></p>
-          <h4 id="374-primer-nivel">3.7.4 Primer nivel.</h4>
+          <h4 id="474-primer-nivel">4.7.4 Primer nivel.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -959,7 +971,7 @@
           </div>
           
           <p><br></p>
-          <h4 id="375-segundo-nivel">3.7.5 Segundo nivel.</h4>
+          <h4 id="475-segundo-nivel">4.7.5 Segundo nivel.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -1031,7 +1043,7 @@
           </div>
           
           <p><br></p>
-          <h4 id="38-codigo-ine-de-tramo">3.8 Código INE de tramo.</h4>
+          <h4 id="48-codigo-ine-de-tramo">4.8 Código INE de tramo.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -1071,7 +1083,7 @@
           </small>
           </div>
           <p><br></p>
-          <h4 id="39-lengua">3.9 Lengua.</h4>
+          <h4 id="49-lengua">4.9 Lengua.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -1147,7 +1159,7 @@
             </table></p>
           <p></small></p>
           <p><br></p>
-          <h4 id="310-tipo-de-dato">3.10 Tipo de dato.</h4>
+          <h4 id="410-tipo-de-dato">4.10 Tipo de dato.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -1187,7 +1199,7 @@
           </ul>
           <p>Este atributo permite acotar el ámbito de la búsqueda de una dirección, topónimo o POI a un subconjunto de registros en función de su tipología.
           <br></p>
-          <h4 id="311-estado">3.11 Estado.</h4>
+          <h4 id="411-estado">4.11 Estado.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -1229,7 +1241,7 @@
           <p>Fuente: <a href="https://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2010:323:0011:0102:Es:PDF"><em>Reglamento (UE) Nº 1089/2010</em></a>.</p>
           <p>Este atributo permite acotar el ámbito de la búsqueda de una dirección, topónimo o POI a un subconjunto de registros en función de su estado.</p>
           <p><br></p>
-          <h4 id="312-proveedor">3.12 Proveedor.</h4>
+          <h4 id="412-proveedor">4.12 Proveedor.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -1270,7 +1282,7 @@
           </small>
           </div>
           <p><br></p>
-          <h4 id="313-geometria"><mayus>3.13 Geometría.</mayus></h4>
+          <h4 id="413-geometria"><mayus>4.13 Geometría.</mayus></h4>
           <p><br></p>
           <p>Expresión de las coordenadas que definen la ubicación geográfica de un registro de datos, representado mediante un objeto puntual.</p>
           <ul>
@@ -1305,7 +1317,7 @@
           </div>
           
           <p><br></p>
-          <h4 id="3131-latitud">3.13.1 Latitud.</h4>
+          <h4 id="4131-latitud">4.13.1 Latitud.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -1338,7 +1350,7 @@
           </tbody>
           </table>
           <p><br></p>
-          <h4 id="3132-longitud">3.13.2 Longitud.</h4>
+          <h4 id="4132-longitud">4.13.2 Longitud.</h4>
           <p><br></p>
           <table>
           <thead>
@@ -1371,13 +1383,7 @@
           </tbody>
           </table>
           <p><br></p>
-          <h3 id="4-formato-del-fichero">4. Formato del fichero.</h3>
-          <p><br></p>
-          <p>El formato de fichero de intercambio de datos debe ser conforme con el estándar CSV (<em>Comma-Separated Values</em>) <a href="https://datatracker.ietf.org/doc/html/rfc4180">[RFC 4180]</a>, utilizando como separador de los atributos el carácter <em>punto y coma</em> (;).</p>
-          <p>Cada registro (dirección, topónimo, punto de interés) se define mediante una línea adicional en el fichero.</p>
-          <p>Los datos de latitud y longitud deben indicarse con al menos cinco (5) cifras decimales de precisión geográfica.</p>
-          <p>Codificación de caracteres: <a href="https://es.wikipedia.org/wiki/UTF-8">UTF-8 sin BOM</a>.</p>
-          <p><br></p>
+
           <hr /></div>
                   
                   
