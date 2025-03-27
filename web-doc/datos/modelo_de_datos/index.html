@@ -456,6 +456,7 @@
           <p><br></p>
           <p>El formato de fichero de intercambio de datos debe ser conforme con el estándar CSV (<em>Comma-Separated Values</em>) <a href="https://datatracker.ietf.org/doc/html/rfc4180">[RFC 4180]</a>, utilizando como separador de los atributos el carácter <em>punto y coma</em> (;). Tiene que tener la siguiente configuración:</p>
           <ul>
+          <li>La cabecera tiene que ser la siguiente, se rellenen los datos optativos o no, y con el siguiente orden: <br>ID; TIPVIA; NOMVIA; NUMERO; NOMLOC; CODPOSTAL; CA; PROVINCIA; MUNICIPIO; NIVEL1; NIVEL2; INETRA; LENGUA; TIPDATO; ESTADO; PROVEEDOR; LATITUD; LONGITUD</li>
           <li>Cada registro (dirección, topónimo, punto de interés) se define mediante una línea adicional en el fichero.</li>
           <li>Los datos de latitud y longitud deben indicarse con al menos cinco (5) cifras decimales de precisión geográfica.</li>
           <li>Codificación de caracteres: <a href="https://es.wikipedia.org/wiki/UTF-8">UTF-8 sin BOM</a>.</li>
