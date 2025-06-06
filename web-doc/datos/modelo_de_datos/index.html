@@ -594,7 +594,7 @@
           <p>No es necesario que las organizaciones tengan almacenado en sus bases de datos el <code>TIPVIA</code>. El campo puede estar vacío.</p>
           <p>Se propone, como dominio, utilizar la tipología proporcionada por el INE, la D.G. del Catastro y los departamentos catastrales del País Vasco y Navarra, así como los utilizados en los proyectos de recopilación de datos de direcciones gestionados por otras administraciones públicas.</p>
           <p>Se recomienda utilizar la expresión textual completa para el tipo de vía, siendo posible aplicar las abreviaturas más comunes.</p>
-          <p>En los casos en que el tipo de vía se considere parte intrínseca del nombre, se recomienda no rellenar el atributo <a href="../../datos/modelo_de_datos/#32-tipo-de-via"><code>TIPVIA</code></a> con el fin de no duplicar esta información.</p>
+          <p>En los casos en que el tipo de vía se considere parte intrínseca del nombre, se recomienda no rellenar el atributo <a href="../../datos/modelo_de_datos/#42-tipo-de-via"><code>TIPVIA</code></a> con el fin de no duplicar esta información.</p>
           <p>Tampoco es necesario expresar el tipo de vía en aquellas direcciones identificadas mediante un nombre propio o un código, ni en los casos correspondientes a topónimos o puntos de interés.</p>
           <div class="bs-callout bs-callout-info">
            <small>
@@ -631,7 +631,7 @@
           <div class="bs-callout bs-callout-info">
           <small>
           <h4><small>Notas:</small></h4>
-          En el caso del País Vasco, donde el tipo de vía se coloca generalmente detrás del nombre (Ej: Satrustegi hiribidea, Mirakontxa pasealekua, Zubieta kalea), se recomienda concatenar la información del nombre y tipo de vía conforme a su orden y uso natural dentro del atributo <i>Nombre de la vía</i> <a href="../../datos/modelo_de_datos/#33-nombre-de-la-via">[NOMVIA]</a>, manteniendo vacío el atributo <i>Tipo de vía</i> <a href="../../datos/modelo_de_datos/#32-tipo-de-via">[TIPVIA]</a>.
+          En el caso del País Vasco, donde el tipo de vía se coloca generalmente detrás del nombre (Ej: Satrustegi hiribidea, Mirakontxa pasealekua, Zubieta kalea), se recomienda concatenar la información del nombre y tipo de vía conforme a su orden y uso natural dentro del atributo <i>Nombre de la vía</i> <a href="../../datos/modelo_de_datos/#43-nombre-de-la-via">[NOMVIA]</a>, manteniendo vacío el atributo <i>Tipo de vía</i> <a href="../../datos/modelo_de_datos/#42-tipo-de-via">[TIPVIA]</a>.
           <br>
           <br>
           Es necesario atender los casos en los se incluye un tipo de vía que no coincide con el que ofrece el Ayuntamiento. Ejemplos de ello son la <i>Calle Avda. Mediterráneo</i> o <i>Calle Travesía Camino del Molino</i>.
@@ -671,16 +671,16 @@
           </tbody>
           </table>
           <p>Se recomienda utilizar expresiones completas evitando el uso de abreviaturas, si bien pueden tener cabida las abreviaturas más comunes.</p>
-          <p>Cuando el tipo de vía se trate o se considere como parte del nombre, no se debe rellenar el atributo <a href="../../datos/modelo_de_datos/#32-tipo-de-via"><code>TIPVIA</code></a>.</p>
+          <p>Cuando el tipo de vía se trate o se considere como parte del nombre, no se debe rellenar el atributo <a href="../../datos/modelo_de_datos/#42-tipo-de-via"><code>TIPVIA</code></a>.</p>
           <p>No es necesario expresar el nombre de vía en aquellas direcciones identificadas mediante un código o número de registro, o un nombre de localización.</p>
-          <p>Si alguna organización recoge el tipo de vía en un campo aparte, el atributo <a href="../../datos/modelo_de_datos/#22-tipo-de-via"><code>TIPVIA</code></a> se rellenará. Si la organización no hace esa diferenciación, el tipo de vía vendrá incluido en el atributo <a href="../../datos/modelo_de_datos/#23-nombre-de-la-via"><code>NOMVIA</code></a> junto con el nombre de la vía y en este caso el atributo <a href="../../datos/modelo_de_datos/#32-tipo-de-via"><code>TIPVIA</code></a> estará vacío.</p>
+          <p>Si alguna organización recoge el tipo de vía en un campo aparte, el atributo <a href="../../datos/modelo_de_datos/#42-tipo-de-via"><code>TIPVIA</code></a> se rellenará. Si la organización no hace esa diferenciación, el tipo de vía vendrá incluido en el atributo <a href="../../datos/modelo_de_datos/#43-nombre-de-la-via"><code>NOMVIA</code></a> junto con el nombre de la vía y en este caso el atributo <a href="../../datos/modelo_de_datos/#42-tipo-de-via"><code>TIPVIA</code></a> estará vacío.</p>
           <div class="bs-callout bs-callout-info">
           <small>
           <h4><small>Notas:</small></h4>
-          En los casos de direcciones con nombre de vía, en los que no consta un número pero sí el nombre de la casa o de la finca, es necesario especificar en el registro el nombre de la vía indicando el nombre de la casa en el atributo <i>Nombre de la localización</i> <a href="../../datos/modelo_de_datos/#35-nombre-de-la-localizacion">[NOMLOC]</a>.
+          En los casos de direcciones con nombre de vía, en los que no consta un número pero sí el nombre de la casa o de la finca, es necesario especificar en el registro el nombre de la vía indicando el nombre de la casa en el atributo <i>Nombre de la localización</i> <a href="../../datos/modelo_de_datos/#45-nombre-de-la-localizacion">[NOMLOC]</a>.
           <br>
           <br>
-          En el caso del País Vasco, donde el tipo de vía se coloca generalmente detrás del nombre (Ej: Satrustegi hiribidea, Mirakontxa pasealekua, Zubieta kalea), se recomienda concatenar la información del nombre y tipo de vía conforme a su orden y uso natural dentro del atributo <i>Nombre de la vía</i> <a href="../../datos/modelo_de_datos/#33-nombre-de-la-via">[NOMVIA]</a>, manteniendo vacío el atributo <i>Tipo de vía</i> <a href="../../datos/modelo_de_datos/#32-tipo-de-via">[TIPVIA]</a>.
+          En el caso del País Vasco, donde el tipo de vía se coloca generalmente detrás del nombre (Ej: Satrustegi hiribidea, Mirakontxa pasealekua, Zubieta kalea), se recomienda concatenar la información del nombre y tipo de vía conforme a su orden y uso natural dentro del atributo <i>Nombre de la vía</i> <a href="../../datos/modelo_de_datos/#43-nombre-de-la-via">[NOMVIA]</a>, manteniendo vacío el atributo <i>Tipo de vía</i> <a href="../../datos/modelo_de_datos/#42-tipo-de-via">[TIPVIA]</a>.
           </small>
           </div>
           <p><br></p>
@@ -718,11 +718,11 @@
           </table>
           <p>Se entiende como <em>número</em> (popularmente así denominado) el localizador que acompaña al nombre de la vía con objeto de identificar una dirección específica dentro de esta.</p>
           <p>Aunque generalmente se expresa mediante caracteres numéricos, se admite el uso de textos compuestos numérico-alfabéticos y fórmulas como <em>bis</em>, <em>tris</em>, <em>complementario</em>, <em>supletorio</em>, <em>km</em>, <em>edificio</em>, etc.</p>
-          <p>Las expresiones que complementan o discriminan una numeración como: bis, tris, supletorio, etc. se deben expresar dentro del atributo <a href="../../datos/modelo_de_datos/#34-numero-de-la-finca-portal-o-punto-kilometrico"><code>NUMERO</code></a> a continuación del dato de numeración, con un espacio de separación entre ambos.</p>
+          <p>Las expresiones que complementan o discriminan una numeración como: bis, tris, supletorio, etc. se deben expresar dentro del atributo <a href="../../datos/modelo_de_datos/#44-numero-de-la-finca-portal-o-punto-kilometrico"><code>NUMERO</code></a> a continuación del dato de numeración, con un espacio de separación entre ambos.</p>
           <p>Se recomienda separar los distintos elementos de este atributo, si los hubiera, mediante espacios en blanco, evitando el uso como separadores de comas, puntos y coma, barras o guiones.</p>
           <div class="bs-callout bs-callout-info">
            <small>
-           <h4><small>Ejemplo: uso del atributo <a href="../../datos/modelo_de_datos/#34-numero-de-la-finca-portal-o-punto-kilometrico">NUMERO</a></small></h4>
+           <h4><small>Ejemplo: uso del atributo <a href="../../datos/modelo_de_datos/#44-numero-de-la-finca-portal-o-punto-kilometrico">NUMERO</a></small></h4>
            <ul>
               <li>Paseo de las flores 3 bis (NUMERO = 3 bis)</li>
               <li>Calle de la vaguada Edificio A (NUMERO = Edificio A)</li>
@@ -774,7 +774,7 @@
           </tbody>
           </table>
           <p>Nombre propio por el que se conoce un emplazamiento.</p>
-          <p>Su uso es opcional cuando el registro de datos corresponde a una dirección (<a href="../../datos/modelo_de_datos/#310-tipo-de-dato"><code>TIPDATO</code></a> = <em>Dirección</em>), siendo obligatorio en los registros cuyo tipo de dato (<a href="../../datos/modelo_de_datos/#310-tipo-de-dato"><code>TIPDATO</code></a>) sea <em>Topónimo</em> o <em>POI</em>.</p>
+          <p>Su uso es opcional cuando el registro de datos corresponde a una dirección (<a href="../../datos/modelo_de_datos/#410-tipo-de-dato"><code>TIPDATO</code></a> = <em>Dirección</em>), siendo obligatorio en los registros cuyo tipo de dato (<a href="../../datos/modelo_de_datos/#410-tipo-de-dato"><code>TIPDATO</code></a>) sea <em>Topónimo</em> o <em>POI</em>.</p>
           <div class="bs-callout bs-callout-info">
           <small>
           <h4><small>Nota:</small></h4>
@@ -814,7 +814,7 @@
           </tr>
           </tbody>
           </table>
-          <p>Su uso es obligatorio cuando el registro de datos corresponde a una dirección (<a href="../../datos/modelo_de_datos/#310-tipo-de-dato"><code>TIPDATO</code></a>=<em>Dirección</em>), no siendo necesario en los registros cuyo tipo de dato (<a href="../../datos/modelo_de_datos/#310-tipo-de-dato"><code>TIPDATO</code></a>) sea <em>Topónimo</em> o <em>POI</em>.</p>
+          <p>Su uso es obligatorio cuando el registro de datos corresponde a una dirección (<a href="../../datos/modelo_de_datos/#410-tipo-de-dato"><code>TIPDATO</code></a>=<em>Dirección</em>), y dicha dirección es oficial (<a href="../../datos/modelo_de_datos/#411-estado"><code>ESTADO</code></a>=<em>Oficial</em>), no siendo necesario en los registros cuyo tipo de dato (<a href="../../datos/modelo_de_datos/#410-tipo-de-dato"><code>TIPDATO</code></a>=<em>Dirección</em>), no siendo necesario en los registros cuyo tipo de dato (<a href="../../datos/modelo_de_datos/#410-tipo-de-dato"><code>TIPDATO</code></a>)  sea <em>Topónimo, POI </em>o la tipología (<a href="../../datos/modelo_de_datos/#411-estado"><code>ESTADO</code></a>) de la dirección sea <em>Normalizado, Histórico u Otro.</em></p>
           <p>No incluir separador de millares.</p>
           <p><br></p>
           <h4 id="47-unidades-administrativas">4.7 Unidades Administrativas</h4>
@@ -962,7 +962,7 @@
           </tbody>
           </table>
           <p>Existen muchas posibilidades de estructurar y jerarquizar una dirección por debajo del nivel del municipio, siendo la casuística muy variada.</p>
-          <p>En este modelo se ha establecido la posibilidad de definir hasta dos niveles de jerarquización (<a href="../../datos/modelo_de_datos/#374-primer-nivel"><code>NIVEL1</code></a> y <a href="../../datos/modelo_de_datos/#375-segundo-nivel"><code>NIVEL2</code></a>) de orden inferior al municipio, pudiendo ser estos niveles los que dicta la práctica y la costumbre de cada caso o territorio, no fijándose de antemano una estructura específica.</p>
+          <p>En este modelo se ha establecido la posibilidad de definir hasta dos niveles de jerarquización (<a href="../../datos/modelo_de_datos/#474-primer-nivel"><code>NIVEL1</code></a> y <a href="../../datos/modelo_de_datos/#475-segundo-nivel"><code>NIVEL2</code></a>) de orden inferior al municipio, pudiendo ser estos niveles los que dicta la práctica y la costumbre de cada caso o territorio, no fijándose de antemano una estructura específica.</p>
           <p>Los textos de los nombres de agrupamiento de direcciones de primer nivel deben expresarse preferiblemente en lenguaje natural (no indizado), evitando el uso de abreviaturas y de fórmulas de indexación, por ejemplo: «El Escorial», siendo las formas no recomendadas «Escorial, El», «Escorial (El)».</p>
           <div class="bs-callout bs-callout-info">
           <small>
@@ -1009,7 +1009,7 @@
           <div class="bs-callout bs-callout-info">
            <small>
            <h4><small>Ejemplos: NIVEL1 y NIVEL2</small></h4>
-           Ejemplos de uso de los atributos <a href="../../datos/modelo_de_datos/#374-primer-nivel">NIVEL1</a> y <a href="../../datos/modelo_de_datos/#375-segundo-nivel">NIVEL2</a>
+           Ejemplos de uso de los atributos <a href="../../datos/modelo_de_datos/#474-primer-nivel">NIVEL1</a> y <a href="../../datos/modelo_de_datos/#475-segundo-nivel">NIVEL2</a>
            <table class="table table-bordered">
             <thead>
               <tr>
